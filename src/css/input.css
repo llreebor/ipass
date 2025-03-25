@@ -19,14 +19,35 @@
 	--color-gray-400: #525252;
 }
 
+@layer base {
+	h1 {
+		@apply tablet:text-4xl laptop:text-5xl text-3xl leading-snug font-semibold;
+	}
+	h2 {
+		@apply tablet:text-3xl laptop:text-4xl text-3xl leading-snug font-semibold;
+	}
+}
+
 /* Container max-width & paddings */
 @utility container {
 	@apply mx-auto max-w-[var(--container-max-width)] p-[var(--container-padding)];
+}
+
+@layer components {
+	.btn {
+		@apply border-primary flex max-w-fit items-center justify-center gap-3 rounded-full border px-4 py-2 font-semibold;
+	}
 }
 
 @layer utilities {
 	/* Mobile Menu With Drawer */
 	.mobile-menu.open {
 		@apply left-0;
+	}
+	.btn.btn-secondary {
+		@apply hover:text-primary border-white text-white transition-colors hover:bg-white;
+	}
+	.btn.btn-primary {
+		@apply border-primary text-primary hover:bg-primary transition-colors hover:text-white;
 	}
 }
