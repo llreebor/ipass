@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Variables */
+@theme {
+	/* Breakpoints */
+	--breakpoint-*: initial;
+	--breakpoint-mobile: 640px;
+	--breakpoint-tablet: 768px;
+	--breakpoint-laptop: 1024px;
+	--breakpoint-desktop: 1280px;
+	/* Container */
+	--container-padding: 0 16px;
+	--container-max-width: 1312px;
+	/* Fonts */
+	--font-inter: "Inter", serif;
+	/* Colors */
+	--color-primary: #282561;
+	--color-violet-300: #524cc7;
+	--color-gray-400: #525252;
+}
+
+/* Container max-width & paddings */
+@utility container {
+	@apply mx-auto max-w-[var(--container-max-width)] p-[var(--container-padding)];
+}
+
+@layer utilities {
+	/* Mobile Menu With Drawer */
+	.mobile-menu.open {
+		@apply left-0;
+	}
+}

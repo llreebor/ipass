@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/output.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="relative h-full">
+		<div class="wrapper flex min-h-full flex-col">
+			<!-- Desktop First -->
+			<header class="bg-primary laptop:py-5 py-4 shadow-sm">
+				<div class="container">
+					<div class="flex items-center justify-between">
+						<a href=" #">
+							<img src="./images/global/logo.svg" alt="logo image" />
+						</a>
+						<!-- Desktop menu -->
+						<nav id="menu" class="laptop:flex z-10 hidden">
+							<ul class="flex items-center gap-2">
+								<!-- Menu Item -->
+								<li>
+									<a
+										href="#"
+										class="menu-link hover:text-primary rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
+									>
+										<span>Home</span>
+									</a>
+								</li>
+
+								<!-- Menu Item With Submenu -->
+								<li
+									class="menu-link group hover:text-primary relative flex items-center gap-2 rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
+								>
+									<a href="#" class="menu-link flex items-center gap-2">
+										<span>Products</span>
+
+										<svg
+											class="transition-transform group-hover:rotate-180"
+											xmlns="http://www.w3.org/2000/svg"
+											width="15"
+											height="8"
+											viewBox="0 0 15 8"
+											fill="none"
+										>
+											<path
+												class="group-hover:stroke-primary"
+												d="M13.3334 1L7.33337 7L1.33337 1"
+												stroke="#ffffff"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+
+										<!-- Submenu | Dropdown -->
+										<ul
+											class="absolute top-full left-0 hidden min-w-max overflow-hidden rounded-md bg-white group-hover:grid"
+										>
+											<li>
+												<a
+													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+													href="#"
+												>
+													Multi-Technology Readers
+												</a>
+											</li>
+											<li>
+												<a
+													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+													href="#"
+												>
+													Cryptographic Access Cards
+												</a>
+											</li>
+											<li>
+												<a
+													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+													href="#"
+												>
+													Secure Mobile Credentials
+												</a>
+											</li>
+										</ul>
+									</a>
+								</li>
+
+								<!-- Menu Item -->
+								<li>
+									<a
+										href="#"
+										class="menu-link hover:text-primary rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
+									>
+										<span>Solutions</span>
+									</a>
+								</li>
+
+								<!-- Menu Item With Submenu -->
+								<li
+									class="menu-link group hover:text-primary relative flex items-center gap-2 rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
+								>
+									<a href="#" class="menu-link flex items-center gap-2">
+										<span>Resources</span>
+
+										<svg
+											class="transition-transform group-hover:rotate-180"
+											xmlns="http://www.w3.org/2000/svg"
+											width="15"
+											height="8"
+											viewBox="0 0 15 8"
+											fill="none"
+										>
+											<path
+												class="group-hover:stroke-primary"
+												d="M13.3334 1L7.33337 7L1.33337 1"
+												stroke="#ffffff"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+
+										<!-- Submenu | Dropdown -->
+										<ul
+											class="absolute top-full left-0 hidden min-w-max overflow-hidden rounded-md bg-white group-hover:grid"
+										>
+											<li>
+												<a
+													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+													href="#"
+												>
+													Data Sheets
+												</a>
+											</li>
+											<li>
+												<a
+													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+													href="#"
+												>
+													White Papers
+												</a>
+											</li>
+											<li>
+												<a
+													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+													href="#"
+												>
+													User Guides
+												</a>
+											</li>
+										</ul>
+									</a>
+								</li>
+
+								<!-- Menu Item -->
+								<li>
+									<a
+										href="#"
+										class="menu-link hover:text-primary rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
+									>
+										<span>Contact</span>
+									</a>
+								</li>
+
+								<!-- Menu Item With Submenu -->
+								<li
+									class="menu-link group hover:text-primary relative flex items-center gap-2 rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
+								>
+									<a href="#" class="menu-link flex items-center gap-2">
+										<span>About</span>
+
+										<svg
+											class="transition-transform group-hover:rotate-180"
+											xmlns="http://www.w3.org/2000/svg"
+											width="15"
+											height="8"
+											viewBox="0 0 15 8"
+											fill="none"
+										>
+											<path
+												class="group-hover:stroke-primary"
+												d="M13.3334 1L7.33337 7L1.33337 1"
+												stroke="#ffffff"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+
+										<!-- Submenu | Dropdown -->
+										<ul
+											class="absolute top-full left-0 hidden min-w-max overflow-hidden rounded-md bg-white group-hover:grid"
+										>
+											<li>
+												<a
+													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+													href="#"
+												>
+													Company
+												</a>
+											</li>
+											<li>
+												<a
+													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+													href="#"
+												>
+													Newsroom
+												</a>
+											</li>
+											<li>
+												<a
+													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+													href="#"
+												>
+													Privacy
+												</a>
+											</li>
+											<li>
+												<a
+													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+													href="#"
+												>
+													Terms
+												</a>
+											</li>
+											<li>
+												<a
+													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+													href="#"
+												>
+													Cookies
+												</a>
+											</li>
+										</ul>
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+						<!--  Mobile menu -->
+						<div
+							id="mobile-menu"
+							class="mobile-menu group fixed top-0 -left-full z-20 h-full w-full bg-black/70"
+						>
+							<div
+								class="bg-primary relative flex h-full w-0 flex-col space-y-4 overflow-auto px-4 pt-4 transition-all duration-300 group-[.open]:w-[80%]"
+							>
+								<a href=" #">
+									<img src="./images/global/logo.svg" alt="logo image" />
+								</a>
+								<nav class="flex-1 pt-8">
+									<ul class="divide-y divide-white/10">
+										<!-- Menu Item -->
+										<li class="py-2">
+											<a
+												href="#"
+												class="menu-link text-lg font-medium text-white"
+											>
+												Home
+											</a>
+										</li>
+
+										<!-- Menu Item With Submenu -->
+										<li
+											class="with-submenu menu-link group relative py-2 text-lg font-medium text-white"
+										>
+											<div class="flex flex-col">
+												<!-- Submenu Trigger -->
+												<button
+													class="submenu-trigger flex items-center justify-between gap-2"
+												>
+													<span class="pointer-events-none">Products</span>
+													<svg
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														class="pointer-events-none transition-transform group-[.active]:rotate-180"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<path
+															d="M7 10L12 15L17 10"
+															stroke="#ffffff"
+															stroke-opacity="1"
+															stroke-width="3"
+															stroke-linecap="round"
+															stroke-linejoin="round"
+														/>
+													</svg>
+												</button>
+
+												<!-- Submenu Content -->
+												<div
+													class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:mt-2 group-[.active]:grid-rows-[1fr]"
+												>
+													<div class="overflow-hidden">
+														<ul>
+															<li>
+																<a href="#" class="flex px-3 py-2 text-base">
+																	Multi-Technology Readers
+																</a>
+															</li>
+															<li>
+																<a href="#" class="flex px-3 py-2 text-base">
+																	Cryptographic Access Cards
+																</a>
+															</li>
+															<li>
+																<a href="#" class="flex px-3 py-2 text-base">
+																	Secure Mobile Credentials
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</li>
+
+										<!-- Menu Item -->
+										<li class="py-2">
+											<a
+												href="#"
+												class="menu-link text-lg font-medium text-white"
+											>
+												Solutions
+											</a>
+										</li>
+
+										<!-- Menu Item With Submenu -->
+										<li
+											class="with-submenu menu-link group relative py-2 text-lg font-medium text-white"
+										>
+											<div class="flex flex-col">
+												<!-- Submenu Trigger -->
+												<button
+													class="submenu-trigger flex items-center justify-between gap-2"
+												>
+													<span class="pointer-events-none">Resources</span>
+													<svg
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														class="pointer-events-none transition-transform group-[.active]:rotate-180"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<path
+															d="M7 10L12 15L17 10"
+															stroke="#ffffff"
+															stroke-opacity="1"
+															stroke-width="3"
+															stroke-linecap="round"
+															stroke-linejoin="round"
+														/>
+													</svg>
+												</button>
+
+												<!-- Submenu Content -->
+												<div
+													class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:mt-2 group-[.active]:grid-rows-[1fr]"
+												>
+													<div class="overflow-hidden">
+														<ul>
+															<li>
+																<a href="#" class="flex px-3 py-2 text-base">
+																	Data Sheets
+																</a>
+															</li>
+															<li>
+																<a href="#" class="flex px-3 py-2 text-base">
+																	White Papers
+																</a>
+															</li>
+															<li>
+																<a href="#" class="flex px-3 py-2 text-base">
+																	User Guides
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</li>
+
+										<!-- Menu Item -->
+										<li class="py-2">
+											<a
+												href="#"
+												class="menu-link text-lg font-medium text-white"
+											>
+												Contact
+											</a>
+										</li>
+
+										<!-- Menu Item With Submenu -->
+										<li
+											class="with-submenu menu-link group relative py-2 text-lg font-medium text-white"
+										>
+											<div class="flex flex-col">
+												<!-- Submenu Trigger -->
+												<button
+													class="submenu-trigger flex items-center justify-between gap-2"
+												>
+													<span class="pointer-events-none">About</span>
+													<svg
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														class="pointer-events-none transition-transform group-[.active]:rotate-180"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<path
+															d="M7 10L12 15L17 10"
+															stroke="#ffffff"
+															stroke-opacity="1"
+															stroke-width="3"
+															stroke-linecap="round"
+															stroke-linejoin="round"
+														/>
+													</svg>
+												</button>
+
+												<!-- Submenu Content -->
+												<div
+													class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:mt-2 group-[.active]:grid-rows-[1fr]"
+												>
+													<div class="overflow-hidden">
+														<ul>
+															<li>
+																<a href="#" class="flex px-3 py-2 text-base">
+																	Company
+																</a>
+															</li>
+															<li>
+																<a href="#" class="flex px-3 py-2 text-base">
+																	Newsroom
+																</a>
+															</li>
+															<li>
+																<a href="#" class="flex px-3 py-2 text-base">
+																	Privacy
+																</a>
+															</li>
+															<li>
+																<a href="#" class="flex px-3 py-2 text-base">
+																	Terms
+																</a>
+															</li>
+															<li>
+																<a href="#" class="flex px-3 py-2 text-base">
+																	Cookies
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+
+						<!-- Burger Button -->
+						<button
+							id="burger"
+							class="group laptop:hidden relative z-20 block h-5 w-[30px]"
+						>
+							<span
+								class="absolute top-0 left-0 flex h-[2px] w-[30px] bg-white transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45"
+							></span>
+							<span
+								class="absolute top-1/2 left-0 flex h-[2px] w-[30px] translate-x-0 -translate-y-1/2 bg-white transition-transform group-[.active]:opacity-0"
+							></span>
+							<span
+								class="absolute bottom-0 left-0 flex h-[2px] w-[30px] bg-white transition-transform group-[.active]:-translate-y-[10px] group-[.active]:-rotate-45"
+							></span>
+						</button>
+					</div>
+				</div>
+			</header>
+			<!-- Main Content -->
+			<main class="flex-auto">
+				<div class="container mt-20"></div>
+			</main>
+
+			<!-- Footer -->
+			<footer class="flex h-40 items-center justify-center bg-slate-300">
+				FOOTER
+			</footer>
+		</div>
+
+		<!-- JS -->
+		<script src="./js/main.js"></script>
+	</body>
+</html>
