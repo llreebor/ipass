@@ -8,6 +8,7 @@
       "Courier New", monospace;
     --color-blue-100: #e8f0f9;
     --color-blue-700: oklch(0.488 0.243 264.376);
+    --color-violet-300: #524cc7;
     --color-gray-200: oklch(0.928 0.006 264.531);
     --color-gray-400: #525252;
     --color-black: #000;
@@ -308,12 +309,6 @@
   }
   .w-0 {
     width: calc(var(--spacing) * 0);
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
-  .w-1\/2 {
-    width: calc(1/2 * 100%);
   }
   .w-\[30px\] {
     width: 30px;
@@ -621,11 +616,6 @@
     --tw-duration: 500ms;
     transition-duration: 500ms;
   }
-  .not-landscape\:w-full {
-    @media not (orientation: landscape) {
-      width: 100%;
-    }
-  }
   .group-hover\:grid {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -738,6 +728,12 @@
     &::before {
       content: var(--tw-content);
       background-color: var(--color-blue-700);
+    }
+  }
+  .before\:bg-violet-300 {
+    &::before {
+      content: var(--tw-content);
+      background-color: var(--color-violet-300);
     }
   }
   .after\:absolute {
@@ -931,11 +927,6 @@
       background-image: url('../images/home/hero.png');
     }
   }
-  .laptop\:p-5 {
-    @media (width >= 1024px) {
-      padding: calc(var(--spacing) * 5);
-    }
-  }
   .laptop\:p-10 {
     @media (width >= 1024px) {
       padding: calc(var(--spacing) * 10);
@@ -972,60 +963,8 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
-  .laptop\:portrait\:w-1\/2 {
-    @media (width >= 1024px) {
-      @media (orientation: portrait) {
-        width: calc(1/2 * 100%);
-      }
-    }
-  }
-  .landscape\:w-1\/2 {
-    @media (orientation: landscape) {
-      width: calc(1/2 * 100%);
-    }
-  }
-  .landscape\:w-full {
-    @media (orientation: landscape) {
-      width: 100%;
-    }
-  }
   .max-\[1367px\]\:landscape\:w-full {
     @media (width < 1367px) {
-      @media (orientation: landscape) {
-        width: 100%;
-      }
-    }
-  }
-  .max-\[1366px\]\:landscape\:w-full {
-    @media (width < 1366px) {
-      @media (orientation: landscape) {
-        width: 100%;
-      }
-    }
-  }
-  .max-\[1024px\]\:landscape\:w-full {
-    @media (width < 1024px) {
-      @media (orientation: landscape) {
-        width: 100%;
-      }
-    }
-  }
-  .landscape\:laptop\:w-full {
-    @media (orientation: landscape) {
-      @media (width >= 1024px) {
-        width: 100%;
-      }
-    }
-  }
-  .laptop\:landscape\:w-1\/2 {
-    @media (width >= 1024px) {
-      @media (orientation: landscape) {
-        width: calc(1/2 * 100%);
-      }
-    }
-  }
-  .laptop\:landscape\:w-full {
-    @media (width >= 1024px) {
       @media (orientation: landscape) {
         width: 100%;
       }
