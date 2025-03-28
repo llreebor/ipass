@@ -1,980 +1,928 @@
 <!doctype html>
 <html lang="en" class="h-full">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>iPass Security LLC</title>
-		<link rel="stylesheet" href="./css/output.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPass Security LLC</title>
+    <link rel="stylesheet" href="./css/output.css" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body class="relative h-full">
-		<div class="wrapper flex min-h-full flex-col">
-			<!-- Desktop First -->
-			<header
-				class="bg-primary laptop:py-5 sticky top-0 left-0 z-20 py-4 shadow-sm"
-			>
-				<div class="container">
-					<div class="flex items-center justify-between">
-						<a href=" #">
-							<img src="./images/global/logo.svg" alt="logo image" />
-						</a>
-						<!-- Desktop menu -->
-						<nav id="menu" class="laptop:flex z-10 hidden">
-							<ul class="flex items-center gap-2">
-								<!-- Menu Item -->
-								<li>
-									<a
-										href="#"
-										class="menu-link hover:text-primary rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
-									>
-										<span>Home</span>
-									</a>
-								</li>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="relative h-full">
+    <div class="wrapper flex min-h-full flex-col">
+      <!-- Header -->
+      <header
+        class="bg-primary laptop:py-5 sticky top-0 left-0 z-20 py-4 shadow-sm"
+      >
+        <div class="container">
+          <div class="flex items-center justify-between">
+            <a href=" #">
+              <img src="./images/global/logo.svg" alt="logo image" />
+            </a>
+            <!-- Desktop menu -->
+            <nav id="menu" class="laptop:flex z-10 hidden">
+              <ul class="flex items-center gap-1">
+                <!-- Menu Item -->
+                <li>
+                  <a
+                    href="#"
+                    class="menu-link hover:text-primary rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
+                  >
+                    <span>Home</span>
+                  </a>
+                </li>
 
-								<!-- Menu Item With Submenu -->
-								<li
-									class="menu-link group hover:text-primary relative flex items-center gap-2 rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
-								>
-									<a href="#" class="menu-link flex items-center gap-2">
-										<span>Products</span>
+                <!-- Menu Item With Submenu -->
+                <li class="group relative flex items-center">
+                  <a
+                    href="#"
+                    class="hover:text-primary bg-primary flex items-center rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
+                  >
+                    <span>Products</span>
+                  </a>
 
-										<svg
-											class="transition-transform group-hover:rotate-180"
-											xmlns="http://www.w3.org/2000/svg"
-											width="15"
-											height="8"
-											viewBox="0 0 15 8"
-											fill="none"
-										>
-											<path
-												class="group-hover:stroke-primary"
-												d="M13.3334 1L7.33337 7L1.33337 1"
-												stroke="#ffffff"
-												stroke-width="2"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											/>
-										</svg>
+                  <!-- Submenu | Dropdown -->
+                  <ul
+                    class="absolute top-full left-0 hidden min-w-max overflow-hidden rounded-md bg-white group-hover:grid"
+                  >
+                    <li>
+                      <a
+                        class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+                        href="#"
+                      >
+                        Multi-Technology Readers
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+                        href="#"
+                      >
+                        Cryptographic Access Cards
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+                        href="#"
+                      >
+                        Secure Mobile Credentials
+                      </a>
+                    </li>
+                  </ul>
+                </li>
 
-										<!-- Submenu | Dropdown -->
-										<ul
-											class="absolute top-full left-0 hidden min-w-max overflow-hidden rounded-md bg-white group-hover:grid"
-										>
-											<li>
-												<a
-													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
-													href="#"
-												>
-													Multi-Technology Readers
-												</a>
-											</li>
-											<li>
-												<a
-													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
-													href="#"
-												>
-													Cryptographic Access Cards
-												</a>
-											</li>
-											<li>
-												<a
-													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
-													href="#"
-												>
-													Secure Mobile Credentials
-												</a>
-											</li>
-										</ul>
-									</a>
-								</li>
+                <!-- Menu Item -->
+                <li>
+                  <a
+                    href="#"
+                    class="menu-link hover:text-primary rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
+                  >
+                    <span>Solutions</span>
+                  </a>
+                </li>
 
-								<!-- Menu Item -->
-								<li>
-									<a
-										href="#"
-										class="menu-link hover:text-primary rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
-									>
-										<span>Solutions</span>
-									</a>
-								</li>
+                <!-- Menu Item With Submenu -->
+                <li class="group relative flex items-center">
+                  <a
+                    href="#"
+                    class="hover:text-primary bg-primary flex items-center rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
+                  >
+                    <span>Resources</span>
+                  </a>
 
-								<!-- Menu Item With Submenu -->
-								<li
-									class="menu-link group hover:text-primary relative flex items-center gap-2 rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
-								>
-									<a href="#" class="menu-link flex items-center gap-2">
-										<span>Resources</span>
+                  <!-- Submenu | Dropdown -->
+                  <ul
+                    class="absolute top-full left-0 hidden min-w-max overflow-hidden rounded-md bg-white group-hover:grid"
+                  >
+                    <li>
+                      <a
+                        class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+                        href="#"
+                      >
+                        Data Sheets
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+                        href="#"
+                      >
+                        White Papers
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+                        href="#"
+                      >
+                        User Guides
+                      </a>
+                    </li>
+                  </ul>
+                </li>
 
-										<svg
-											class="transition-transform group-hover:rotate-180"
-											xmlns="http://www.w3.org/2000/svg"
-											width="15"
-											height="8"
-											viewBox="0 0 15 8"
-											fill="none"
-										>
-											<path
-												class="group-hover:stroke-primary"
-												d="M13.3334 1L7.33337 7L1.33337 1"
-												stroke="#ffffff"
-												stroke-width="2"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											/>
-										</svg>
+                <!-- Menu Item -->
+                <li>
+                  <a
+                    href="#"
+                    class="menu-link hover:text-primary rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
+                  >
+                    <span>Contact</span>
+                  </a>
+                </li>
 
-										<!-- Submenu | Dropdown -->
-										<ul
-											class="absolute top-full left-0 hidden min-w-max overflow-hidden rounded-md bg-white group-hover:grid"
-										>
-											<li>
-												<a
-													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
-													href="#"
-												>
-													Data Sheets
-												</a>
-											</li>
-											<li>
-												<a
-													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
-													href="#"
-												>
-													White Papers
-												</a>
-											</li>
-											<li>
-												<a
-													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
-													href="#"
-												>
-													User Guides
-												</a>
-											</li>
-										</ul>
-									</a>
-								</li>
+                <!-- Menu Item With Submenu -->
+                <li class="group relative flex items-center">
+                  <a
+                    href="#"
+                    class="hover:text-primary bg-primary flex items-center rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
+                  >
+                    <span>About</span>
+                  </a>
 
-								<!-- Menu Item -->
-								<li>
-									<a
-										href="#"
-										class="menu-link hover:text-primary rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
-									>
-										<span>Contact</span>
-									</a>
-								</li>
+                  <!-- Submenu | Dropdown -->
+                  <ul
+                    class="absolute top-full left-0 hidden min-w-max overflow-hidden rounded-md bg-white group-hover:grid"
+                  >
+                    <li>
+                      <a
+                        class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+                        href="#"
+                      >
+                        Company
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+                        href="#"
+                      >
+                        Newsroom
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+                        href="#"
+                      >
+                        Privacy
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+                        href="#"
+                      >
+                        Terms
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
+                        href="#"
+                      >
+                        Cookies
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
 
-								<!-- Menu Item With Submenu -->
-								<li
-									class="menu-link group hover:text-primary relative flex items-center gap-2 rounded-md px-3 py-1.5 text-lg font-medium text-white transition-colors hover:bg-white"
-								>
-									<a href="#" class="menu-link flex items-center gap-2">
-										<span>About</span>
+            <!--  Mobile menu -->
+            <div
+              id="mobile-menu"
+              class="mobile-menu group fixed top-0 -left-full z-20 h-full w-full bg-black/70"
+            >
+              <div
+                class="bg-primary relative flex h-full w-0 flex-col space-y-4 overflow-auto px-4 pt-4 transition-all duration-300 group-[.open]:w-[80%]"
+              >
+                <a href=" #">
+                  <img src="./images/global/logo.svg" alt="logo image" />
+                </a>
+                <nav class="flex-1 pt-8">
+                  <ul class="divide-y divide-white/10">
+                    <!-- Menu Item -->
+                    <li class="py-2">
+                      <a
+                        href="#"
+                        class="menu-link text-lg font-medium text-white"
+                      >
+                        Home
+                      </a>
+                    </li>
 
-										<svg
-											class="transition-transform group-hover:rotate-180"
-											xmlns="http://www.w3.org/2000/svg"
-											width="15"
-											height="8"
-											viewBox="0 0 15 8"
-											fill="none"
-										>
-											<path
-												class="group-hover:stroke-primary"
-												d="M13.3334 1L7.33337 7L1.33337 1"
-												stroke="#ffffff"
-												stroke-width="2"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											/>
-										</svg>
+                    <!-- Menu Item With Submenu -->
+                    <li
+                      class="with-submenu menu-link group relative py-2 text-lg font-medium text-white"
+                    >
+                      <div class="flex flex-col">
+                        <!-- Submenu Trigger -->
+                        <button
+                          class="submenu-trigger flex items-center justify-between gap-2"
+                        >
+                          <span class="pointer-events-none">Products</span>
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            class="pointer-events-none transition-transform group-[.active]:rotate-180"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 10L12 15L17 10"
+                              stroke="#ffffff"
+                              stroke-opacity="1"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
 
-										<!-- Submenu | Dropdown -->
-										<ul
-											class="absolute top-full left-0 hidden min-w-max overflow-hidden rounded-md bg-white group-hover:grid"
-										>
-											<li>
-												<a
-													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
-													href="#"
-												>
-													Company
-												</a>
-											</li>
-											<li>
-												<a
-													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
-													href="#"
-												>
-													Newsroom
-												</a>
-											</li>
-											<li>
-												<a
-													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
-													href="#"
-												>
-													Privacy
-												</a>
-											</li>
-											<li>
-												<a
-													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
-													href="#"
-												>
-													Terms
-												</a>
-											</li>
-											<li>
-												<a
-													class="bg-primary hover:text-primary flex px-4 py-2 text-base text-white hover:bg-gray-200"
-													href="#"
-												>
-													Cookies
-												</a>
-											</li>
-										</ul>
-									</a>
-								</li>
-							</ul>
-						</nav>
+                        <!-- Submenu Content -->
+                        <div
+                          class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:mt-2 group-[.active]:grid-rows-[1fr]"
+                        >
+                          <div class="overflow-hidden">
+                            <ul>
+                              <li>
+                                <a href="#" class="flex px-3 py-2 text-base">
+                                  Multi-Technology Readers
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="flex px-3 py-2 text-base">
+                                  Cryptographic Access Cards
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="flex px-3 py-2 text-base">
+                                  Secure Mobile Credentials
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
 
-						<!--  Mobile menu -->
-						<div
-							id="mobile-menu"
-							class="mobile-menu group fixed top-0 -left-full z-20 h-full w-full bg-black/70"
-						>
-							<div
-								class="bg-primary relative flex h-full w-0 flex-col space-y-4 overflow-auto px-4 pt-4 transition-all duration-300 group-[.open]:w-[80%]"
-							>
-								<a href=" #">
-									<img src="./images/global/logo.svg" alt="logo image" />
-								</a>
-								<nav class="flex-1 pt-8">
-									<ul class="divide-y divide-white/10">
-										<!-- Menu Item -->
-										<li class="py-2">
-											<a
-												href="#"
-												class="menu-link text-lg font-medium text-white"
-											>
-												Home
-											</a>
-										</li>
+                    <!-- Menu Item -->
+                    <li class="py-2">
+                      <a
+                        href="#"
+                        class="menu-link text-lg font-medium text-white"
+                      >
+                        Solutions
+                      </a>
+                    </li>
 
-										<!-- Menu Item With Submenu -->
-										<li
-											class="with-submenu menu-link group relative py-2 text-lg font-medium text-white"
-										>
-											<div class="flex flex-col">
-												<!-- Submenu Trigger -->
-												<button
-													class="submenu-trigger flex items-center justify-between gap-2"
-												>
-													<span class="pointer-events-none">Products</span>
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="none"
-														class="pointer-events-none transition-transform group-[.active]:rotate-180"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M7 10L12 15L17 10"
-															stroke="#ffffff"
-															stroke-opacity="1"
-															stroke-width="3"
-															stroke-linecap="round"
-															stroke-linejoin="round"
-														/>
-													</svg>
-												</button>
+                    <!-- Menu Item With Submenu -->
+                    <li
+                      class="with-submenu menu-link group relative py-2 text-lg font-medium text-white"
+                    >
+                      <div class="flex flex-col">
+                        <!-- Submenu Trigger -->
+                        <button
+                          class="submenu-trigger flex items-center justify-between gap-2"
+                        >
+                          <span class="pointer-events-none">Resources</span>
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            class="pointer-events-none transition-transform group-[.active]:rotate-180"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 10L12 15L17 10"
+                              stroke="#ffffff"
+                              stroke-opacity="1"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
 
-												<!-- Submenu Content -->
-												<div
-													class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:mt-2 group-[.active]:grid-rows-[1fr]"
-												>
-													<div class="overflow-hidden">
-														<ul>
-															<li>
-																<a href="#" class="flex px-3 py-2 text-base">
-																	Multi-Technology Readers
-																</a>
-															</li>
-															<li>
-																<a href="#" class="flex px-3 py-2 text-base">
-																	Cryptographic Access Cards
-																</a>
-															</li>
-															<li>
-																<a href="#" class="flex px-3 py-2 text-base">
-																	Secure Mobile Credentials
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</li>
+                        <!-- Submenu Content -->
+                        <div
+                          class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:mt-2 group-[.active]:grid-rows-[1fr]"
+                        >
+                          <div class="overflow-hidden">
+                            <ul>
+                              <li>
+                                <a href="#" class="flex px-3 py-2 text-base">
+                                  Data Sheets
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="flex px-3 py-2 text-base">
+                                  White Papers
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="flex px-3 py-2 text-base">
+                                  User Guides
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
 
-										<!-- Menu Item -->
-										<li class="py-2">
-											<a
-												href="#"
-												class="menu-link text-lg font-medium text-white"
-											>
-												Solutions
-											</a>
-										</li>
+                    <!-- Menu Item -->
+                    <li class="py-2">
+                      <a
+                        href="#"
+                        class="menu-link text-lg font-medium text-white"
+                      >
+                        Contact
+                      </a>
+                    </li>
 
-										<!-- Menu Item With Submenu -->
-										<li
-											class="with-submenu menu-link group relative py-2 text-lg font-medium text-white"
-										>
-											<div class="flex flex-col">
-												<!-- Submenu Trigger -->
-												<button
-													class="submenu-trigger flex items-center justify-between gap-2"
-												>
-													<span class="pointer-events-none">Resources</span>
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="none"
-														class="pointer-events-none transition-transform group-[.active]:rotate-180"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M7 10L12 15L17 10"
-															stroke="#ffffff"
-															stroke-opacity="1"
-															stroke-width="3"
-															stroke-linecap="round"
-															stroke-linejoin="round"
-														/>
-													</svg>
-												</button>
+                    <!-- Menu Item With Submenu -->
+                    <li
+                      class="with-submenu menu-link group relative py-2 text-lg font-medium text-white"
+                    >
+                      <div class="flex flex-col">
+                        <!-- Submenu Trigger -->
+                        <button
+                          class="submenu-trigger flex items-center justify-between gap-2"
+                        >
+                          <span class="pointer-events-none">About</span>
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            class="pointer-events-none transition-transform group-[.active]:rotate-180"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 10L12 15L17 10"
+                              stroke="#ffffff"
+                              stroke-opacity="1"
+                              stroke-width="3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
 
-												<!-- Submenu Content -->
-												<div
-													class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:mt-2 group-[.active]:grid-rows-[1fr]"
-												>
-													<div class="overflow-hidden">
-														<ul>
-															<li>
-																<a href="#" class="flex px-3 py-2 text-base">
-																	Data Sheets
-																</a>
-															</li>
-															<li>
-																<a href="#" class="flex px-3 py-2 text-base">
-																	White Papers
-																</a>
-															</li>
-															<li>
-																<a href="#" class="flex px-3 py-2 text-base">
-																	User Guides
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</li>
+                        <!-- Submenu Content -->
+                        <div
+                          class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:mt-2 group-[.active]:grid-rows-[1fr]"
+                        >
+                          <div class="overflow-hidden">
+                            <ul>
+                              <li>
+                                <a href="#" class="flex px-3 py-2 text-base">
+                                  Company
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="flex px-3 py-2 text-base">
+                                  Newsroom
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="flex px-3 py-2 text-base">
+                                  Privacy
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="flex px-3 py-2 text-base">
+                                  Terms
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="flex px-3 py-2 text-base">
+                                  Cookies
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
 
-										<!-- Menu Item -->
-										<li class="py-2">
-											<a
-												href="#"
-												class="menu-link text-lg font-medium text-white"
-											>
-												Contact
-											</a>
-										</li>
+            <!-- Burger Button -->
+            <button
+              id="burger"
+              class="group laptop:hidden relative z-20 block h-5 w-[30px]"
+            >
+              <span
+                class="absolute top-0 left-0 flex h-[2px] w-[30px] bg-white transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45"
+              ></span>
+              <span
+                class="absolute top-1/2 left-0 flex h-[2px] w-[30px] translate-x-0 -translate-y-1/2 bg-white transition-transform group-[.active]:opacity-0"
+              ></span>
+              <span
+                class="absolute bottom-0 left-0 flex h-[2px] w-[30px] bg-white transition-transform group-[.active]:-translate-y-[10px] group-[.active]:-rotate-45"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- Main Content -->
+      <main class="flex-auto">
+        <!-- Hero -->
+        <section
+          class="tablet:pb-80 laptop:bg-[url('../images/home/hero.png')] bg-[url('../images/home/hero_mobile.jpg')] bg-cover bg-center bg-no-repeat pt-20 pb-96"
+        >
+          <div class="container">
+            <div class="laptop:max-w-1/2 laptop:mt-20 flex flex-col">
+              <h1 class="laptop:text-left text-center text-balance text-white">
+                Unlocking the Future of Access Control
+              </h1>
 
-										<!-- Menu Item With Submenu -->
-										<li
-											class="with-submenu menu-link group relative py-2 text-lg font-medium text-white"
-										>
-											<div class="flex flex-col">
-												<!-- Submenu Trigger -->
-												<button
-													class="submenu-trigger flex items-center justify-between gap-2"
-												>
-													<span class="pointer-events-none">About</span>
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="none"
-														class="pointer-events-none transition-transform group-[.active]:rotate-180"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M7 10L12 15L17 10"
-															stroke="#ffffff"
-															stroke-opacity="1"
-															stroke-width="3"
-															stroke-linecap="round"
-															stroke-linejoin="round"
-														/>
-													</svg>
-												</button>
+              <p class="laptop:max-w-[500px] mt-8 text-base text-white">
+                iPass is a technology leader in secure access control. Discover
+                our state-of-the-art solutions and elevate your security to the
+                next level.
+              </p>
+            </div>
+          </div>
+        </section>
 
-												<!-- Submenu Content -->
-												<div
-													class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:mt-2 group-[.active]:grid-rows-[1fr]"
-												>
-													<div class="overflow-hidden">
-														<ul>
-															<li>
-																<a href="#" class="flex px-3 py-2 text-base">
-																	Company
-																</a>
-															</li>
-															<li>
-																<a href="#" class="flex px-3 py-2 text-base">
-																	Newsroom
-																</a>
-															</li>
-															<li>
-																<a href="#" class="flex px-3 py-2 text-base">
-																	Privacy
-																</a>
-															</li>
-															<li>
-																<a href="#" class="flex px-3 py-2 text-base">
-																	Terms
-																</a>
-															</li>
-															<li>
-																<a href="#" class="flex px-3 py-2 text-base">
-																	Cookies
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</nav>
-							</div>
-						</div>
+        <!-- Technology Leadership -->
+        <section class="laptop:py-20 z-0 bg-blue-100 py-10">
+          <div class="container">
+            <div
+              class="laptop:grid-cols-2 laptop:items-center laptop:gap-20 grid gap-10"
+            >
+              <!-- Image -->
+              <div class="laptop:order-2 space-y-10">
+                <h2 class="text-primary laptop:hidden block">
+                  Technology Leadership
+                </h2>
+                <div
+                  class="relative mr-10 mb-10 before:absolute before:-right-10 before:-bottom-10 before:z-0 before:h-full before:w-full before:rounded-3xl before:bg-blue-700 after:absolute after:-right-5 after:-bottom-5 after:z-0 after:h-full after:w-full after:rounded-3xl after:bg-white"
+                >
+                  <img
+                    class="relative z-10 rounded-3xl"
+                    src="./images/home/home-1.jpg"
+                    alt="home image"
+                  />
+                </div>
+              </div>
 
-						<!-- Burger Button -->
-						<button
-							id="burger"
-							class="group laptop:hidden relative z-20 block h-5 w-[30px]"
-						>
-							<span
-								class="absolute top-0 left-0 flex h-[2px] w-[30px] bg-white transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45"
-							></span>
-							<span
-								class="absolute top-1/2 left-0 flex h-[2px] w-[30px] translate-x-0 -translate-y-1/2 bg-white transition-transform group-[.active]:opacity-0"
-							></span>
-							<span
-								class="absolute bottom-0 left-0 flex h-[2px] w-[30px] bg-white transition-transform group-[.active]:-translate-y-[10px] group-[.active]:-rotate-45"
-							></span>
-						</button>
-					</div>
-				</div>
-			</header>
-			<!-- Main Content -->
-			<main class="flex-auto">
-				<!-- Hero -->
-				<section
-					class="tablet:pb-80 laptop:bg-[url('../images/home/hero.png')] bg-[url('../images/home/hero_mobile.jpg')] bg-cover bg-center bg-no-repeat pt-14 pb-96"
-				>
-					<div class="container">
-						<div class="laptop:max-w-1/2 laptop:mt-20 flex flex-col">
-							<h1 class="laptop:text-left text-center text-white">
-								Unlocking the Future of Access Control
-							</h1>
+              <!-- Info -->
+              <div class="laptop:order-1 laptop:p-10 space-y-5">
+                <h2 class="text-primary laptop:block hidden">
+                  Technology Leadership
+                </h2>
+                <p
+                  class="laptop:text-left text-justify font-medium text-gray-400"
+                >
+                  In a world where security is paramount, iPass stands at the
+                  forefront of technological innovation, offering
+                  state-of-the-art security solutions for physical access
+                  control. Our range of multi-technology access readers,
+                  cryptographic access cards, and smartphone credentials are
+                  designed to integrate seamlessly with your existing access
+                  control system, providing enhanced security without
+                  complexity.
+                </p>
 
-							<p
-								class="laptop:text-left laptop:max-w-[500px] mt-4 text-center text-xl text-white"
-							>
-								iPass is a technology leader in secure access control. Discover
-								our state-of-the-art solutions and elevate your security to the
-								next level.
-							</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-							<div class="mt-6">
-								<a
-									href="#"
-									class="btn btn-secondary laptop:max-w-fit max-w-full"
-								>
-									Shop Now
-								</a>
-							</div>
-						</div>
-					</div>
-				</section>
+        <!-- Revolutionary Readers -->
+        <section class="laptop:py-20 z-0 bg-white py-10">
+          <div class="container">
+            <div
+              class="laptop:grid-cols-2 laptop:items-center laptop:gap-20 grid gap-10"
+            >
+              <!-- Image -->
+              <div class="space-y-10">
+                <h2 class="text-primary laptop:hidden block">
+                  Revolutionary Readers
+                </h2>
+                <div
+                  class="relative mt-20 ml-10 before:absolute before:-top-10 before:-left-10 before:z-0 before:h-full before:w-full before:rounded-3xl before:bg-blue-700 after:absolute after:-top-5 after:-left-5 after:z-0 after:h-full after:w-full after:rounded-3xl after:bg-white"
+                >
+                  <img
+                    class="relative z-10 rounded-3xl"
+                    src="./images/home/home-2.jpg"
+                    alt="home image"
+                  />
+                </div>
+              </div>
 
-				<!-- Technology Leadership -->
-				<section class="laptop:py-20 z-0 bg-gray-200 py-10">
-					<div class="container">
-						<div
-							class="laptop:grid-cols-2 laptop:items-center laptop:gap-20 grid gap-10"
-						>
-							<!-- Image -->
-							<div class="laptop:order-2 space-y-5">
-								<h2 class="text-primary laptop:hidden block">
-									Technology Leadership
-								</h2>
-								<div
-									class="before:bg-primary relative mr-10 mb-10 before:absolute before:-right-10 before:-bottom-10 before:z-0 before:h-full before:w-full before:rounded-3xl after:absolute after:-right-5 after:-bottom-5 after:z-0 after:h-full after:w-full after:rounded-3xl after:bg-white"
-								>
-									<img
-										class="relative z-10 rounded-3xl"
-										src="./images/home/home-1.jpg"
-										alt="home image"
-									/>
-								</div>
-							</div>
+              <!-- Info -->
+              <div class="laptop:p-10 space-y-5">
+                <h2 class="text-primary laptop:block hidden">
+                  Revolutionary Readers
+                </h2>
+                <p class="laptop:text-xl font-bold text-gray-400">
+                  iPass Multi-Technology Readers
+                </p>
+                <p
+                  class="laptop:text-left text-justify font-medium text-gray-400"
+                >
+                  Experience the future of access control with iPass
+                  Multi-Technology Access Readers. Our advanced access readers
+                  support all access control systems and cards, offering
+                  flexibility plus high security. With support for Bluetooth
+                  smartphone and NFC smart card authentication, and connectivity
+                  via Wiegand and OSDP Secure Channel, our readers ensure that
+                  only authorized personnel can access your facilities. Stylish
+                  ergonomic design, in multiple form factors and capabilities,
+                  makes them a perfect fit for all access requirement.
+                </p>
 
-							<!-- Info -->
-							<div class="laptop:order-1 space-y-5">
-								<h2 class="text-primary laptop:block hidden">
-									Technology Leadership
-								</h2>
-								<p class="laptop:text-xl text-gray-400">
-									In a world where security is paramount, iPass stands at the
-									forefront of technological innovation, offering
-									state-of-the-art security solutions for physical access
-									control. Our range of multi-technology access readers,
-									cryptographic access cards, and smartphone credentials are
-									designed to integrate seamlessly with your existing access
-									control system, providing enhanced security without
-									complexity.
-								</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-								<a href="#" class="btn btn-primary">Learn More</a>
-							</div>
-						</div>
-					</div>
-				</section>
+        <!-- Unbreakable Security -->
+        <section class="laptop:py-20 bg-primary z-0 py-10">
+          <div class="container">
+            <div
+              class="laptop:grid-cols-2 laptop:items-center laptop:gap-20 grid"
+            >
+              <!-- Image -->
+              <div class="laptop:order-2 space-y-10">
+                <h2 class="laptop:hidden block text-white">
+                  Unbreakable Security
+                </h2>
+                <div class="relative mr-10 mb-10">
+                  <img
+                    class="relative z-10 rounded-3xl"
+                    src="./images/home/home-3.png"
+                    alt="home image"
+                  />
+                </div>
+              </div>
 
-				<!-- Revolutionary Readers -->
-				<section class="laptop:py-20 z-0 bg-white py-10">
-					<div class="container">
-						<div
-							class="laptop:grid-cols-2 laptop:items-center laptop:gap-20 grid gap-10"
-						>
-							<!-- Image -->
-							<div class="space-y-5">
-								<h2 class="text-primary laptop:hidden block">
-									Revolutionary Readers
-								</h2>
-								<div
-									class="before:bg-primary relative mt-16 ml-10 before:absolute before:-top-10 before:-left-10 before:z-0 before:h-full before:w-full before:rounded-3xl after:absolute after:-top-5 after:-left-5 after:z-0 after:h-full after:w-full after:rounded-3xl after:bg-white"
-								>
-									<img
-										class="relative z-10 rounded-3xl"
-										src="./images/home/home-2.jpg"
-										alt="home image"
-									/>
-								</div>
-							</div>
+              <!-- Info -->
+              <div class="laptop:order-1 laptop:p-10 space-y-5">
+                <h2 class="laptop:block hidden text-white">
+                  Unbreakable Security
+                </h2>
 
-							<!-- Info -->
-							<div class="space-y-5">
-								<h2 class="text-primary laptop:block hidden">
-									Revolutionary Readers
-								</h2>
-								<p class="laptop:text-xl font-bold text-gray-400">
-									iPass Multi-Technology Readers
-								</p>
-								<p class="laptop:text-xl text-gray-400">
-									Experience the future of access control with iPass
-									Multi-Technology Access Readers. Our advanced access readers
-									support all access control systems and cards, offering
-									flexibility plus high security. With support for Bluetooth
-									smartphone and NFC smart card authentication, and connectivity
-									via Wiegand and OSDP Secure Channel, our readers ensure that
-									only authorized personnel can access your facilities. Stylish
-									ergonomic design, in multiple form factors and capabilities,
-									makes them a perfect fit for all access requirement.
-								</p>
+                <p class="laptop:text-xl font-bold text-white">
+                  iPass Cryptographic Access Cards
+                </p>
+                <p class="laptop:text-xl text-white">
+                  Elevate your security level with iPass Cryptographic Access
+                  Cards. Utilizing high-strength public key cryptography, our
+                  access cards provide unbreakable credentials that
+                  significantly enhance the security of any access solution. A
+                  public key that can be exposed without risk and a private key
+                  that never leaves the card eliminate the risk of duplication
+                  or forgery, plus our uniquely simple “no PKI” technology, make
+                  them the perfect choice to enhance any access control system.
+                </p>
 
-								<a href="#" class="btn btn-primary">Learn More</a>
-							</div>
-						</div>
-					</div>
-				</section>
+                <a href="#" class="btn btn-secondary">Learn Now</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-				<!-- Unbreakable Security -->
-				<section class="laptop:py-20 bg-primary z-0 py-10">
-					<div class="container">
-						<div
-							class="laptop:grid-cols-2 laptop:items-center laptop:gap-20 grid"
-						>
-							<!-- Image -->
-							<div class="laptop:order-2 space-y-5">
-								<h2 class="laptop:hidden block text-white">
-									Unbreakable Security
-								</h2>
-								<div class="relative mr-10 mb-10">
-									<img
-										class="relative z-10 rounded-3xl"
-										src="./images/home/home-3.png"
-										alt="home image"
-									/>
-								</div>
-							</div>
+        <!-- Intuitive Mobility -->
+        <section class="laptop:py-20 z-0 bg-white py-10">
+          <div class="container">
+            <div
+              class="laptop:grid-cols-2 laptop:items-center laptop:gap-20 grid gap-10"
+            >
+              <!-- Image -->
+              <div class="laptop:order-2 space-y-10">
+                <h2 class="text-primary laptop:hidden block">
+                  Intuitive Mobility
+                </h2>
+                <div
+                  class="relative mr-10 mb-10 before:absolute before:-right-10 before:-bottom-10 before:z-0 before:h-full before:w-full before:rounded-3xl before:bg-blue-700 after:absolute after:-right-5 after:-bottom-5 after:z-0 after:h-full after:w-full after:rounded-3xl after:bg-white"
+                >
+                  <img
+                    class="relative z-10 h-auto w-full max-w-full rounded-3xl"
+                    src="./images/home/home-4.jpg"
+                    alt="home image"
+                  />
+                </div>
+              </div>
 
-							<!-- Info -->
-							<div class="laptop:order-1 space-y-5">
-								<h2 class="laptop:block hidden text-white">
-									Unbreakable Security
-								</h2>
+              <!-- Info -->
+              <div class="laptop:order-1 laptop:p-10 space-y-5">
+                <h2 class="text-primary laptop:block hidden">
+                  Intuitive Mobility
+                </h2>
+                <p class="laptop:text-xl font-bold text-gray-400">
+                  iPass Mobile Credentials
+                </p>
+                <p
+                  class="laptop:text-left text-justify font-medium text-gray-400"
+                >
+                  Leverage Bluetooth smartphones or watches as secure access
+                  credentials with iPass Mobile Credentials. Our intuitive iPass
+                  App, available for both iOS and Android, allows for quick and
+                  easy enrollment and credential generation. With support for
+                  multi-factor authentication, including PIN codes, facial
+                  recognition, and fingerprint matching, our mobile credentials
+                  offers flexible security levels to meet the most stringent
+                  security requirements.
+                </p>
 
-								<p class="laptop:text-xl font-bold text-white">
-									iPass Cryptographic Access Cards
-								</p>
-								<p class="laptop:text-xl text-white">
-									Elevate your security level with iPass Cryptographic Access
-									Cards. Utilizing high-strength public key cryptography, our
-									access cards provide unbreakable credentials that
-									significantly enhance the security of any access solution. A
-									public key that can be exposed without risk and a private key
-									that never leaves the card eliminate the risk of duplication
-									or forgery, plus our uniquely simple “no PKI” technology, make
-									them the perfect choice to enhance any access control system.
-								</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-								<a href="#" class="btn btn-secondary">Learn Now</a>
-							</div>
-						</div>
-					</div>
-				</section>
+        <!-- Seamless Integration -->
+        <section class="laptop:py-20 z-0 bg-blue-100 py-10">
+          <div class="container">
+            <div
+              class="laptop:grid-cols-2 laptop:items-center laptop:gap-20 grid gap-10"
+            >
+              <!-- Image -->
+              <div class="space-y-10">
+                <h2 class="text-primary laptop:hidden block">
+                  Seamless Integration
+                </h2>
+                <div
+                  class="relative mt-20 ml-10 before:absolute before:-top-10 before:-left-10 before:z-0 before:h-full before:w-full before:rounded-3xl before:bg-blue-700 after:absolute after:-top-5 after:-left-5 after:z-0 after:h-full after:w-full after:rounded-3xl after:bg-white"
+                >
+                  <img
+                    class="relative z-10 rounded-3xl"
+                    src="./images/home/home-5.jpg"
+                    alt="home image"
+                  />
+                </div>
+              </div>
 
-				<!-- Intuitive Mobility -->
-				<section class="laptop:py-20 z-0 bg-white py-10">
-					<div class="container">
-						<div
-							class="laptop:grid-cols-2 laptop:items-center laptop:gap-20 grid gap-10"
-						>
-							<!-- Image -->
-							<div class="laptop:order-2 space-y-5">
-								<h2 class="text-primary laptop:hidden block">
-									Intuitive Mobility
-								</h2>
-								<div
-									class="before:bg-primary relative mr-10 mb-10 before:absolute before:-right-10 before:-bottom-10 before:z-0 before:h-full before:w-full before:rounded-3xl after:absolute after:-right-5 after:-bottom-5 after:z-0 after:h-full after:w-full after:rounded-3xl after:bg-white"
-								>
-									<img
-										class="relative z-10 h-auto w-full max-w-full rounded-3xl"
-										src="./images/home/home-4.jpg"
-										alt="home image"
-									/>
-								</div>
-							</div>
+              <!-- Info -->
+              <div class="laptop:p-10 space-y-5">
+                <h2 class="text-primary laptop:block hidden">
+                  Seamless Integration
+                </h2>
 
-							<!-- Info -->
-							<div class="laptop:order-1 space-y-5">
-								<h2 class="text-primary laptop:block hidden">
-									Intuitive Mobility
-								</h2>
-								<p class="laptop:text-xl font-bold text-gray-400">
-									iPass Mobile Credentials
-								</p>
-								<p class="laptop:text-xl text-gray-400">
-									Leverage Bluetooth smartphones or watches as secure access
-									credentials with iPass Mobile Credentials. Our intuitive iPass
-									App, available for both iOS and Android, allows for quick and
-									easy enrollment and credential generation. With support for
-									multi-factor authentication, including PIN codes, facial
-									recognition, and fingerprint matching, our mobile credentials
-									offers flexible security levels to meet the most stringent
-									security requirements.
-								</p>
+                <p
+                  class="laptop:text-left text-justify font-medium text-gray-400"
+                >
+                  All iPass products are designed for easy integration with your
+                  existing access control system. Our readers and cards are
+                  compatible with all access solutions and authentication
+                  technologies, and can be quickly configured to meet your
+                  specific needs. Whether upgrading an older access system or
+                  implementing a new one, iPass provides a smooth transition to
+                  higher security.
+                </p>
 
-								<a href="#" class="btn btn-primary">Learn More</a>
-							</div>
-						</div>
-					</div>
-				</section>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-				<!-- Seamless Integration -->
-				<section class="laptop:py-20 z-0 bg-gray-200 py-10">
-					<div class="container">
-						<div
-							class="laptop:grid-cols-2 laptop:items-center laptop:gap-20 grid gap-10"
-						>
-							<!-- Image -->
-							<div class="space-y-5">
-								<h2 class="text-primary laptop:hidden block">
-									Revolutionary Readers
-								</h2>
-								<div
-									class="before:bg-primary relative mt-16 ml-10 before:absolute before:-top-10 before:-left-10 before:z-0 before:h-full before:w-full before:rounded-3xl after:absolute after:-top-5 after:-left-5 after:z-0 after:h-full after:w-full after:rounded-3xl after:bg-white"
-								>
-									<img
-										class="relative z-10 rounded-3xl"
-										src="./images/home/home-5.jpg"
-										alt="home image"
-									/>
-								</div>
-							</div>
+        <!-- Join the Revolution -->
+        <section class="laptop:py-20 bg-primary z-0 py-10">
+          <div class="container">
+            <div
+              class="laptop:grid-cols-2 laptop:items-start laptop:gap-20 grid"
+            >
+              <!-- Image -->
+              <div class="laptop:order-2 space-y-10">
+                <h2 class="laptop:hidden block text-white">
+                  Join the Revolution
+                </h2>
+                <div class="relative mr-10 mb-10">
+                  <img
+                    class="relative z-10 rounded-3xl"
+                    src="./images/home/home-6.png"
+                    alt="home image"
+                  />
+                </div>
+              </div>
 
-							<!-- Info -->
-							<div class="space-y-5">
-								<h2 class="text-primary laptop:block hidden">
-									Revolutionary Readers
-								</h2>
+              <!-- Info -->
+              <div class="laptop:order-1 laptop:p-10 space-y-5">
+                <h2 class="laptop:block hidden text-white">
+                  Join the Revolution
+                </h2>
 
-								<p class="laptop:text-xl text-gray-400">
-									All iPass products are designed for easy integration with your
-									existing access control system. Our readers and cards are
-									compatible with all access solutions and authentication
-									technologies, and can be quickly configured to meet your
-									specific needs. Whether upgrading an older access system or
-									implementing a new one, iPass provides a smooth transition to
-									higher security.
-								</p>
+                <p class="laptop:text-xl text-white">
+                  Upgrade to iPass and implement a new standard in access
+                  control technology. Our products are not just solutions; they
+                  are investments in the safety and integrity of your
+                  facilities. Reach out to our sales team to learn how iPass can
+                  seamlessly enhance your organization’s physical security, or
+                  explore our website to view our state-of-the-art security
+                  products and solutions.
+                </p>
+              </div>
+            </div>
 
-								<a href="#" class="btn btn-primary">Learn More</a>
-							</div>
-						</div>
-					</div>
-				</section>
+            <div
+              class="laptop:pl-10 laptop:w-1/2 laptop:mt-0 mt-10 grid gap-5 max-[1367px]:landscape:w-full"
+            >
+              <div class="space-y-3">
+                <label
+                  for="keep_informed"
+                  class="flex cursor-pointer items-center gap-3"
+                >
+                  <input
+                    type="checkbox"
+                    id="keep_informed"
+                    name="keep_informed"
+                    class="checkbox show-form-checkbox"
+                  />
+                  <span class="text-lg text-white">
+                    Keep me informed about iPass
+                  </span>
+                </label>
+                <label
+                  for="contact_me"
+                  class="flex cursor-pointer items-center gap-3"
+                >
+                  <input
+                    type="checkbox"
+                    id="contact_me"
+                    name="contact_me"
+                    class="checkbox show-form-checkbox"
+                  />
+                  <span class="text-lg text-white">
+                    Have a sales person contact me
+                  </span>
+                </label>
+              </div>
+              <form
+                action="#"
+                class="mt-6 hidden flex-col gap-4"
+                id="contact-form"
+              >
+                <div class="tablet:grid-cols-2 grid gap-4">
+                  <label for="first_name">
+                    <input
+                      type="text"
+                      class="input"
+                      name="first_name"
+                      id="first_name"
+                      placeholder="First Name *"
+                      required
+                    />
+                  </label>
 
-				<!-- Join the Revolution -->
-				<section class="laptop:py-20 bg-primary z-0 py-10">
-					<div class="container">
-						<div
-							class="laptop:grid-cols-2 laptop:items-start laptop:gap-20 grid"
-						>
-							<!-- Image -->
-							<div class="laptop:order-2 space-y-5">
-								<h2 class="laptop:hidden block text-white">
-									Join the Revolution
-								</h2>
-								<div class="relative mr-10 mb-10">
-									<img
-										class="relative z-10 rounded-3xl"
-										src="./images/home/home-6.png"
-										alt="home image"
-									/>
-								</div>
-							</div>
+                  <label for="last_name">
+                    <input
+                      type="text"
+                      class="input"
+                      name="last_name"
+                      id="last_name"
+                      placeholder="Last Name *"
+                      required
+                    />
+                  </label>
+                </div>
 
-							<!-- Info -->
-							<div class="laptop:order-1 space-y-5">
-								<h2 class="laptop:block hidden text-white">
-									Join the Revolution
-								</h2>
+                <div class="tablet:grid-cols-2 grid gap-4">
+                  <label for="company">
+                    <input
+                      type="text"
+                      class="input"
+                      name="company"
+                      id="company"
+                      placeholder="Company"
+                    />
+                  </label>
 
-								<p class="laptop:text-xl text-white">
-									Upgrade to iPass and implement a new standard in access
-									control technology. Our products are not just solutions; they
-									are investments in the safety and integrity of your
-									facilities. Reach out to our sales team to learn how iPass can
-									seamlessly enhance your organization’s physical security, or
-									explore our website to view our state-of-the-art security
-									products and solutions.
-								</p>
+                  <label for="role">
+                    <input
+                      type="text"
+                      class="input"
+                      name="role"
+                      id="role"
+                      placeholder="Role"
+                    />
+                  </label>
+                </div>
 
-								<div class="grid gap-5">
-									<div class="space-y-3">
-										<label
-											for="keep_informed"
-											class="flex cursor-pointer items-center gap-3"
-										>
-											<input
-												type="checkbox"
-												id="keep_informed"
-												name="keep_informed"
-												class="checkbox show-form-checkbox"
-											/>
-											<span class="text-lg text-white">
-												Keep me informed about iPass
-											</span>
-										</label>
-										<label
-											for="contact_me"
-											class="flex cursor-pointer items-center gap-3"
-										>
-											<input
-												type="checkbox"
-												id="contact_me"
-												name="contact_me"
-												class="checkbox show-form-checkbox"
-											/>
-											<span class="text-lg text-white">
-												Have a sales person contact me
-											</span>
-										</label>
-									</div>
-									<form
-										action="#"
-										class="mt-6 hidden flex-col gap-4"
-										id="contact-form"
-									>
-										<div class="tablet:grid-cols-2 grid gap-4">
-											<label for="first_name">
-												<input
-													type="text"
-													class="input"
-													name="first_name"
-													id="first_name"
-													placeholder="First Name *"
-													required
-												/>
-											</label>
+                <div class="tablet:grid-cols-2 grid gap-4">
+                  <label for="email">
+                    <input
+                      type="email"
+                      class="input"
+                      name="email"
+                      id="email"
+                      placeholder="Email*"
+                    />
+                  </label>
 
-											<label for="last_name">
-												<input
-													type="text"
-													class="input"
-													name="last_name"
-													id="last_name"
-													placeholder="Last Name *"
-													required
-												/>
-											</label>
-										</div>
+                  <label for="phone">
+                    <input
+                      type="text"
+                      class="input"
+                      name="phone"
+                      id="phone"
+                      placeholder="Phone"
+                    />
+                  </label>
+                </div>
 
-										<div class="tablet:grid-cols-2 grid gap-4">
-											<label for="company">
-												<input
-													type="text"
-													class="input"
-													name="company"
-													id="company"
-													placeholder="Company"
-												/>
-											</label>
+                <div class="flex justify-center">
+                  <button class="btn btn-secondary" type="submit">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
 
-											<label for="role">
-												<input
-													type="text"
-													class="input"
-													name="role"
-													id="role"
-													placeholder="Role"
-												/>
-											</label>
-										</div>
+      <!-- Footer -->
+      <footer class="laptop:py-16 bg-primary border-t border-t-white/20 py-12">
+        <div class="container">
+          <div class="flex justify-between">
+            <div>
+              <p class="tablet:text-lg text-md font-bold text-white">
+                iPass Security LLC
+              </p>
+              <p class="tablet:text-lg text-md font-bold text-white">
+                Emeryville
+              </p>
+              <p class="tablet:text-lg text-md font-bold text-white">
+                California, USA
+              </p>
+            </div>
+            <div class="flex flex-col text-right">
+              <a
+                href="#"
+                class="tablet:text-lg text-md font-bold text-white underline-offset-4 hover:underline"
+              >
+                www.ipass.io
+              </a>
+              <a
+                href="mailto:info@ipass.io"
+                class="text-lg font-bold text-white underline-offset-4 hover:underline"
+              >
+                info@ipass.io
+              </a>
+            </div>
+          </div>
 
-										<div class="tablet:grid-cols-2 grid gap-4">
-											<label for="email">
-												<input
-													type="email"
-													class="input"
-													name="email"
-													id="email"
-													placeholder="Email*"
-												/>
-											</label>
+          <div class="mt-10 flex flex-col items-center">
+            <div>
+              <p class="tablet:text-sm text-center text-xs text-white">
+                Technical specifications are subject to change
+              </p>
+              <p class="tablet:text-sm text-center text-xs text-white">
+                Copyright © 2025 iPass Security LLC, All rights reserved
+              </p>
+              <p class="tablet:text-sm text-center text-xs text-white">
+                All trademarks are the property of their respective owners
+              </p>
+            </div>
+          </div>
 
-											<label for="phone">
-												<input
-													type="text"
-													class="input"
-													name="phone"
-													id="phone"
-													placeholder="Phone"
-												/>
-											</label>
-										</div>
+          <ul class="mt-10 flex items-center justify-center divide-x">
+            <a
+              href="#"
+              class="tablet:text-base px-3 text-sm text-white underline-offset-4 hover:underline"
+            >
+              Privacy Policy
+            </a>
 
-										<div>
-											<button class="btn btn-secondary" type="submit">
-												Submit
-											</button>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
+            <a
+              href="#"
+              class="tablet:text-base px-3 text-sm text-white underline-offset-4 hover:underline"
+            >
+              Terms of Use
+            </a>
 
-			<!-- Footer -->
-			<footer class="laptop:py-16 bg-primary mt-20 py-12">
-				<div class="container">
-					<div class="flex justify-between">
-						<div>
-							<p class="tablet:text-lg text-md font-bold text-white">
-								iPass Security LLC
-							</p>
-							<p class="tablet:text-lg text-md font-bold text-white">
-								Emeryville
-							</p>
-							<p class="tablet:text-lg text-md font-bold text-white">
-								California, USA
-							</p>
-						</div>
-						<div class="flex flex-col text-right">
-							<a
-								href="#"
-								class="tablet:text-lg text-md font-bold text-white underline-offset-4 hover:underline"
-							>
-								www.ipass.io
-							</a>
-							<a
-								href="mailto:info@ipass.io"
-								class="text-lg font-bold text-white underline-offset-4 hover:underline"
-							>
-								info@ipass.io
-							</a>
-						</div>
-					</div>
+            <a
+              href="#"
+              class="tablet:text-base px-3 text-sm text-white underline-offset-4 hover:underline"
+            >
+              Cookies
+            </a>
+          </ul>
+        </div>
+      </footer>
+    </div>
 
-					<div class="mt-10 flex flex-col items-center">
-						<div>
-							<p class="tablet:text-sm text-center text-xs text-white">
-								Technical specifications are subject to change
-							</p>
-							<p class="tablet:text-sm text-center text-xs text-white">
-								Copyright © 2025 iPass Security LLC, All rights reserved
-							</p>
-							<p class="tablet:text-sm text-center text-xs text-white">
-								All trademarks are the property of their respective owners
-							</p>
-						</div>
-					</div>
-
-					<ul class="mt-10 flex items-center justify-center divide-x">
-						<a
-							href="#"
-							class="tablet:text-base px-3 text-sm text-white underline-offset-4 hover:underline"
-						>
-							Privacy Policy
-						</a>
-
-						<a
-							href="#"
-							class="tablet:text-base px-3 text-sm text-white underline-offset-4 hover:underline"
-						>
-							Terms of Use
-						</a>
-
-						<a
-							href="#"
-							class="tablet:text-base px-3 text-sm text-white underline-offset-4 hover:underline"
-						>
-							Cookies
-						</a>
-					</ul>
-				</div>
-			</footer>
-		</div>
-
-		<!-- JS -->
-		<script src="./js/main.js"></script>
-	</body>
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </body>
 </html>
