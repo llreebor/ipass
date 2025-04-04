@@ -18,6 +18,7 @@
   --color-violet-300: #524cc7;
   --color-gray-400: #525252;
   --color-blue-100: #e8f0f9;
+  --color-blue-500: #003087;
 }
 
 @layer base {
@@ -25,7 +26,7 @@
     @apply tablet:text-4xl laptop:text-5xl text-3xl leading-tight font-semibold;
   }
   h2 {
-    @apply tablet:text-3xl laptop:text-4xl text-3xl leading-snug font-semibold;
+    @apply tablet:text-3xl text-3xl leading-snug font-semibold;
   }
   body {
     @apply font-openSans;
