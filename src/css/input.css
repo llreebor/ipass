@@ -9,14 +9,18 @@
   --breakpoint-laptop: 1024px;
   --breakpoint-desktop: 1280px;
   /* Container */
-  --container-padding: 0 16px;
-  --container-max-width: 1312px;
+  --container-padding: 0 32px;
+  --container-max-width: 1348px;
   /* Fonts */
   --font-openSans: "Open Sans", sans-serif;
   /* Colors */
   --color-primary: #282561;
+
   --color-violet-300: #524cc7;
+
   --color-gray-400: #525252;
+  --color-gray-500: #4b5563;
+
   --color-blue-100: #e8f0f9;
   --color-blue-500: #003087;
 }
