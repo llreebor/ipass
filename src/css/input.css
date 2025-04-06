@@ -4,7 +4,6 @@
 @theme {
   /* Breakpoints */
   --breakpoint-*: initial;
-  --breakpoint-mobile: 640px;
   --breakpoint-tablet: 768px;
   --breakpoint-laptop: 1024px;
   --breakpoint-desktop: 1280px;
@@ -59,6 +58,7 @@
   .mobile-menu.open {
     @apply left-0;
   }
+  /* Buttons */
   .btn.btn-secondary {
     @apply hover:text-primary border-white text-white transition-colors hover:bg-white;
   }
