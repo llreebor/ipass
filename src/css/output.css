@@ -211,9 +211,6 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -303,9 +300,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -342,21 +336,11 @@
   .flex-auto {
     flex: auto;
   }
-  .flex-shrink {
-    flex-shrink: 1;
-  }
   .shrink-0 {
     flex-shrink: 0;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .translate-x-0 {
     --tw-translate-x: calc(var(--spacing) * 0);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
@@ -380,9 +364,6 @@
   }
   .items-center {
     align-items: center;
-  }
-  .items-start {
-    align-items: flex-start;
   }
   .justify-between {
     justify-content: space-between;
@@ -468,11 +449,6 @@
       border-color: var(--color-blue-900);
     }
   }
-  .divide-white {
-    :where(& > :not(:last-child)) {
-      border-color: var(--color-white);
-    }
-  }
   .divide-white\/10 {
     :where(& > :not(:last-child)) {
       border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
@@ -490,22 +466,12 @@
   .rounded-md {
     border-radius: var(--radius-md);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-t {
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
   }
-  .border-t-white {
-    border-top-color: var(--color-white);
-  }
   .border-t-white\/20 {
     border-top-color: color-mix(in oklab, var(--color-white) 20%, transparent);
-  }
-  .bg-black {
-    background-color: var(--color-black);
   }
   .bg-black\/70 {
     background-color: color-mix(in oklab, var(--color-black) 70%, transparent);
@@ -542,9 +508,6 @@
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
-  }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
   }
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
@@ -616,9 +579,6 @@
   .text-balance {
     text-wrap: balance;
   }
-  .text-wrap {
-    text-wrap: wrap;
-  }
   .text-blue-900 {
     color: var(--color-blue-900);
   }
@@ -634,9 +594,6 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .underline-offset-4 {
     text-underline-offset: 4px;
   }
@@ -647,10 +604,6 @@
   .shadow-xl {
     --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
@@ -1282,11 +1235,6 @@
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";

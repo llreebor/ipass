@@ -129,6 +129,4 @@ function toggleTabs() {
     })
   })
 }
-
-// Call the function without parameters
 toggleTabs()
