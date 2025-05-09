@@ -26,6 +26,18 @@
 
   --color-blue-900: #160964;
   --color-blue-950: #1b172e;
+
+  /* Animation */
+  --animate-fadeIn: fadeIn ease 0.3s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 @layer base {
@@ -33,7 +45,10 @@
     @apply tablet:text-4xl laptop:text-5xl text-3xl leading-tight font-semibold;
   }
   h2 {
-    @apply tablet:text-5xl text-[42px] leading-normal font-semibold;
+    @apply text-[42px] leading-normal font-semibold;
+  }
+  h3 {
+    @apply text-4xl font-semibold;
   }
   body {
     @apply font-openSans bg-gray-100;
@@ -47,7 +62,7 @@
 
 @layer components {
   .btn {
-    @apply flex max-w-fit cursor-pointer items-center justify-center gap-3 rounded-full border border-purple-400 px-5 py-2 font-semibold;
+    @apply flex max-w-fit cursor-pointer items-center justify-center gap-3 rounded-full border px-5 py-2.5 transition-colors;
   }
   .checkbox {
     @apply size-5 cursor-pointer appearance-none rounded-sm border-3 border-white bg-white p-1 checked:rounded-sm checked:bg-purple-400;
@@ -64,9 +79,9 @@
   }
   /* Buttons */
   .btn.btn-secondary {
-    @apply border-white text-white transition-colors hover:bg-white hover:text-purple-400;
+    @apply border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white;
   }
-  .btn.btn-purple-400 {
-    @apply border-purple-400 text-purple-400 transition-colors hover:bg-purple-400 hover:text-white;
+  .btn-primary {
+    @apply border-purple-300 bg-purple-300 text-white hover:bg-purple-400;
   }
 }

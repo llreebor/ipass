@@ -118,3 +118,77 @@ function toggleTabs() {
   })
 }
 toggleTabs()
+
+if (document.querySelectorAll(".swiper").length) {
+  new Swiper(".swiper-smart-access-reader", {
+    // Optional parameters
+    slidesPerView: 1,
+    loop: true,
+    autoHeight: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".smart-access-reader-next",
+      prevEl: ".smart-access-reader-prev",
+    },
+    breakpoints: {
+      1025: {
+        autoHeight: false,
+      },
+    },
+  })
+
+  new Swiper(".swiper-mullion-reader", {
+    // Optional parameters
+    slidesPerView: 1,
+    loop: true,
+    autoHeight: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".mullion-reader-next",
+      prevEl: ".mullion-reader-prev",
+    },
+    breakpoints: {
+      1025: {
+        autoHeight: false,
+      },
+    },
+  })
+
+  new Swiper(".swiper-keypad-reader", {
+    // Optional parameters
+    slidesPerView: 1,
+    loop: true,
+    autoHeight: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".keypad-reader-next",
+      prevEl: ".keypad-reader-prev",
+    },
+    breakpoints: {
+      1025: {
+        autoHeight: false,
+      },
+    },
+  })
+
+  new Swiper(".swiper-dual-reader", {
+    // Optional parameters
+    slidesPerView: 1,
+    loop: true,
+    autoHeight: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".dual-reader-next",
+      prevEl: ".dual-reader-prev",
+    },
+    breakpoints: {
+      1025: {
+        autoHeight: false,
+      },
+    },
+  })
+}
