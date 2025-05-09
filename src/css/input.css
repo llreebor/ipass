@@ -36,7 +36,7 @@
     @apply tablet:text-5xl text-[42px] leading-normal font-semibold;
   }
   body {
-    @apply font-openSans;
+    @apply font-openSans bg-gray-100;
   }
 }
 
