@@ -9,6 +9,8 @@ function initializeMobileMenu() {
   // Constants
   const BREAKPOINT = 991.98 // Desktop breakpoint in pixels
 
+  if (!menu) return
+
   // Toggles mobile menu state
   const toggleMenu = () => {
     burger.classList.toggle("active")
@@ -39,37 +41,23 @@ function initializeMobileMenu() {
       closeMenu()
     }
   })
-}
-// Manages submenu toggle functionality
-function initializeSubmenus() {
-  const submenuTriggers = document.querySelectorAll(".with-submenu")
 
-  // Toggle submenu visibility
-  const toggleSubmenu = (trigger) => {
-    trigger.classList.toggle("active")
-  }
+  // Handle clicks on all links within topMenu and submenus
+  const allMenuLinks = document.querySelectorAll(".mobile-menu-link")
 
-  // Add click handlers to all submenu triggers
-  submenuTriggers.forEach((trigger) => {
-    trigger.addEventListener("click", (event) => {
-      if (event.target.classList.contains("submenu-trigger")) {
-        toggleSubmenu(trigger)
+  allMenuLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      // Allow default behavior (navigation) if href is valid
+      const href = link.getAttribute("href")
+      if (href && href !== "#") {
+        menu.classList.remove("open")
+        burger.classList.remove("active")
+        body.classList.remove("overflow-hidden")
       }
     })
   })
 }
-// Initialize features only if mobile menu exists
-function initializeMobileFeatures() {
-  const mobileMenu = document.getElementById("mobile-menu")
-
-  if (mobileMenu) {
-    initializeMobileMenu()
-    initializeSubmenus()
-  }
-}
-// Execute initialization
-initializeMobileFeatures()
-
+initializeMobileMenu()
 // ====================== Home Page ==============================
 // Home Page Form Visibility
 function showHomeForm() {

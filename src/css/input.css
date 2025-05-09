@@ -8,21 +8,24 @@
   --breakpoint-laptop: 1024px;
   --breakpoint-desktop: 1280px;
   /* Container */
-  --container-padding: 0 32px;
-  --container-max-width: 1348px;
+  --container-padding: 0 12px;
+  --container-max-width: 1304px;
   /* Fonts */
   --font-openSans: "Open Sans", sans-serif;
+
   /* Colors */
-  --color-primary: #282561;
+  --color-gray-100: #efefef;
+  --color-gray-200: #e0e0e0;
+  --color-gray-300: #949494;
+  --color-gray-400: #636363;
+  --color-gray-500: #505050;
+  --color-gray-600: #313131;
 
-  --color-violet-300: #524cc7;
+  --color-purple-300: #533ecd;
+  --color-purple-400: #402f9e;
 
-  --color-gray-200: #f5f5f5;
-  --color-gray-400: #525252;
-  --color-gray-500: #4b5563;
-
-  --color-blue-100: #e8f0f9;
-  --color-blue-500: #003087;
+  --color-blue-900: #160964;
+  --color-blue-950: #1b172e;
 }
 
 @layer base {
@@ -30,7 +33,7 @@
     @apply tablet:text-4xl laptop:text-5xl text-3xl leading-tight font-semibold;
   }
   h2 {
-    @apply tablet:text-3xl text-3xl leading-snug font-semibold;
+    @apply tablet:text-5xl text-[42px] leading-normal font-semibold;
   }
   body {
     @apply font-openSans;
@@ -44,10 +47,10 @@
 
 @layer components {
   .btn {
-    @apply border-primary flex max-w-fit cursor-pointer items-center justify-center gap-3 rounded-full border px-5 py-2 font-semibold;
+    @apply flex max-w-fit cursor-pointer items-center justify-center gap-3 rounded-full border border-purple-400 px-5 py-2 font-semibold;
   }
   .checkbox {
-    @apply checked:bg-primary size-5 cursor-pointer appearance-none rounded-sm border-3 border-white bg-white p-1 checked:rounded-sm;
+    @apply size-5 cursor-pointer appearance-none rounded-sm border-3 border-white bg-white p-1 checked:rounded-sm checked:bg-purple-400;
   }
   .input {
     @apply w-full rounded-sm border border-white px-4 py-2 text-white outline-white placeholder:text-white/70;
@@ -61,9 +64,9 @@
   }
   /* Buttons */
   .btn.btn-secondary {
-    @apply hover:text-primary border-white text-white transition-colors hover:bg-white;
+    @apply border-white text-white transition-colors hover:bg-white hover:text-purple-400;
   }
-  .btn.btn-primary {
-    @apply border-primary text-primary hover:bg-primary transition-colors hover:text-white;
+  .btn.btn-purple-400 {
+    @apply border-purple-400 text-purple-400 transition-colors hover:bg-purple-400 hover:text-white;
   }
 }
