@@ -65,10 +65,10 @@
     @apply flex max-w-fit cursor-pointer items-center justify-center gap-3 rounded-full border px-5 py-2.5 transition-colors;
   }
   .checkbox {
-    @apply size-5 cursor-pointer appearance-none rounded-sm border-3 border-white bg-white p-1 checked:rounded-sm checked:bg-purple-400;
+    @apply relative size-6 cursor-pointer appearance-none rounded-full border-2 border-white bg-transparent p-1 after:absolute after:top-1/2 after:left-1/2 after:hidden after:size-3 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:border-0 after:bg-white after:transition-all checked:bg-transparent checked:after:block;
   }
   .input {
-    @apply w-full rounded-sm border border-white px-4 py-2 text-white outline-white placeholder:text-white/70;
+    @apply w-full rounded-[20px] border border-gray-200 px-5 py-2.5 text-white outline-white placeholder:text-gray-200;
   }
 }
 

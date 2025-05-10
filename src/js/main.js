@@ -87,7 +87,7 @@ function showHomeForm() {
     updateFormVisibility()
   }
 }
-showHomeForm()
+// showHomeForm()
 
 // ============= Multi-Technology Access Readers =================
 //Tabs
