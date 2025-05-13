@@ -8,8 +8,7 @@
   --breakpoint-laptop: 1024px;
   --breakpoint-desktop: 1280px;
   /* Container */
-  --container-padding: 0 12px;
-  --container-max-width: 1304px;
+  --container-max-width: 1440px;
   /* Fonts */
   --font-openSans: "Open Sans", sans-serif;
 
@@ -56,9 +55,8 @@
 }
 
 /* Container max-width & paddings */
-/* @apply mx-auto max-w-[var(--container-max-width)] p-[var(--container-padding)]; */
 @utility container {
-  @apply mx-auto max-w-full px-[2%];
+  @apply desktop:px-[5%] mx-auto max-w-[var(--container-max-width)] px-[3%];
 }
 
 @layer components {
