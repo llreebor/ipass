@@ -56,8 +56,9 @@
 }
 
 /* Container max-width & paddings */
+/* @apply mx-auto max-w-[var(--container-max-width)] p-[var(--container-padding)]; */
 @utility container {
-  @apply mx-auto max-w-[var(--container-max-width)] p-[var(--container-padding)];
+  @apply mx-auto max-w-full px-[2%];
 }
 
 @layer components {

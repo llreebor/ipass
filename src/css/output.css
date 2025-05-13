@@ -51,8 +51,6 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --container-padding: 0 12px;
-    --container-max-width: 1304px;
     --font-openSans: "Open Sans", sans-serif;
     --animate-fadeIn: fadeIn ease 0.3s;
   }
@@ -268,8 +266,8 @@
   }
   .container {
     margin-inline: auto;
-    max-width: var(--container-max-width);
-    padding: var(--container-padding);
+    max-width: 100%;
+    padding-inline: 2%;
   }
   .mx-auto {
     margin-inline: auto;
@@ -1085,13 +1083,6 @@
     &:last-child {
       border-bottom-style: var(--tw-border-style);
       border-bottom-width: 0px;
-    }
-  }
-  .hover\:bg-gray-100 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-gray-100);
-      }
     }
   }
   .hover\:bg-gray-200 {
