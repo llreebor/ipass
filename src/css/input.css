@@ -56,7 +56,7 @@
 
 /* Container max-width & paddings */
 @utility container {
-  @apply desktop:px-[5%] mx-auto max-w-[var(--container-max-width)] px-[3%];
+  @apply desktop:px-[5%] mx-auto max-w-[var(--container-max-width)] px-[4%];
 }
 
 @layer components {

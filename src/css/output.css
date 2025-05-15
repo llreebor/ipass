@@ -271,7 +271,7 @@
   .container {
     margin-inline: auto;
     max-width: var(--container-max-width);
-    padding-inline: 3%;
+    padding-inline: 4%;
     @media (width >= 1280px) {
       padding-inline: 5%;
     }
@@ -354,13 +354,13 @@
   .table {
     display: table;
   }
+  .size-10 {
+    width: calc(var(--spacing) * 10);
+    height: calc(var(--spacing) * 10);
+  }
   .size-12 {
     width: calc(var(--spacing) * 12);
     height: calc(var(--spacing) * 12);
-  }
-  .size-\[60px\] {
-    width: 60px;
-    height: 60px;
   }
   .h-1 {
     height: calc(var(--spacing) * 1);
@@ -377,17 +377,11 @@
   .h-\[264px\] {
     height: 264px;
   }
-  .h-\[274px\] {
-    height: 274px;
-  }
   .h-\[294px\] {
     height: 294px;
   }
-  .h-\[344px\] {
-    height: 344px;
-  }
-  .h-\[644px\] {
-    height: 644px;
+  .h-\[804px\] {
+    height: 804px;
   }
   .h-auto {
     height: auto;
@@ -778,10 +772,6 @@
   .text-right {
     text-align: right;
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
@@ -1171,13 +1161,6 @@
       }
     }
   }
-  .hover\:bg-purple-300 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-purple-300);
-      }
-    }
-  }
   .hover\:bg-purple-300\/50 {
     &:hover {
       @media (hover: hover) {
@@ -1388,11 +1371,6 @@
       height: 490px;
     }
   }
-  .min-\[1023px\]\:max-w-\[450px\] {
-    @media (width >= 1023px) {
-      max-width: 450px;
-    }
-  }
   .min-\[1023px\]\:max-w-\[480px\] {
     @media (width >= 1023px) {
       max-width: 480px;
@@ -1443,14 +1421,29 @@
       width: calc(1/2 * 100%);
     }
   }
+  .laptop\:w-full {
+    @media (width >= 1024px) {
+      width: 100%;
+    }
+  }
   .laptop\:max-w-1\/2 {
     @media (width >= 1024px) {
       max-width: calc(1/2 * 100%);
     }
   }
+  .laptop\:max-w-\[450px\] {
+    @media (width >= 1024px) {
+      max-width: 450px;
+    }
+  }
   .laptop\:max-w-\[500px\] {
     @media (width >= 1024px) {
       max-width: 500px;
+    }
+  }
+  .laptop\:max-w-\[600px\] {
+    @media (width >= 1024px) {
+      max-width: 600px;
     }
   }
   .laptop\:max-w-\[632px\] {
@@ -1493,9 +1486,19 @@
       padding: calc(var(--spacing) * 10);
     }
   }
+  .laptop\:p-14 {
+    @media (width >= 1024px) {
+      padding: calc(var(--spacing) * 14);
+    }
+  }
   .laptop\:px-10 {
     @media (width >= 1024px) {
       padding-inline: calc(var(--spacing) * 10);
+    }
+  }
+  .laptop\:px-16 {
+    @media (width >= 1024px) {
+      padding-inline: calc(var(--spacing) * 16);
     }
   }
   .laptop\:py-5 {
@@ -1511,11 +1514,6 @@
   .laptop\:pr-0 {
     @media (width >= 1024px) {
       padding-right: calc(var(--spacing) * 0);
-    }
-  }
-  .laptop\:pl-\[96px\] {
-    @media (width >= 1024px) {
-      padding-left: 96px;
     }
   }
   .laptop\:text-left {
@@ -1546,16 +1544,6 @@
       line-height: var(--leading-normal);
     }
   }
-  .min-\[1025px\]\:h-\[490px\] {
-    @media (width >= 1025px) {
-      height: 490px;
-    }
-  }
-  .min-\[1025px\]\:max-w-\[450px\] {
-    @media (width >= 1025px) {
-      max-width: 450px;
-    }
-  }
   .desktop\:mt-\[130px\] {
     @media (width >= 1280px) {
       margin-top: 130px;
@@ -1571,6 +1559,17 @@
       display: none;
     }
   }
+  .desktop\:size-\[60px\] {
+    @media (width >= 1280px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .desktop\:h-\[644px\] {
+    @media (width >= 1280px) {
+      height: 644px;
+    }
+  }
   .desktop\:max-w-\[570px\] {
     @media (width >= 1280px) {
       max-width: 570px;
@@ -1579,6 +1578,11 @@
   .desktop\:max-w-full {
     @media (width >= 1280px) {
       max-width: 100%;
+    }
+  }
+  .desktop\:gap-6 {
+    @media (width >= 1280px) {
+      gap: calc(var(--spacing) * 6);
     }
   }
   .desktop\:space-y-\[60px\] {
@@ -1624,6 +1628,23 @@
   .desktop\:pl-\[90px\] {
     @media (width >= 1280px) {
       padding-left: 90px;
+    }
+  }
+  .desktop\:pl-\[96px\] {
+    @media (width >= 1280px) {
+      padding-left: 96px;
+    }
+  }
+  .desktop\:text-2xl {
+    @media (width >= 1280px) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .desktop\:text-xl {
+    @media (width >= 1280px) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
   .desktop\:text-\[48px\] {
