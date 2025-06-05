@@ -8,7 +8,7 @@
   --breakpoint-laptop: 1024px;
   --breakpoint-desktop: 1430px;
   /* Container */
-  --container-max-width: 1440px;
+  --container-max-width: 1460px;
   /* Fonts */
   --font-openSans: "Open Sans", sans-serif;
 
@@ -56,7 +56,7 @@
 
 /* Container max-width & paddings */
 @utility container {
-  @apply desktop:px-[5%] mx-auto max-w-[var(--container-max-width)] px-[4%];
+  @apply desktop:px-[5%] mx-auto max-w-[var(--container-max-width)] px-[4%] min-[2000px]:max-w-[1280px] min-[2000px]:p-0;
 }
 
 @layer components {

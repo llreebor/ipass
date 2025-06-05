@@ -1,3 +1,0 @@
-# TODO:
-
-- menu hover & dropdown
