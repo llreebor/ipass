@@ -393,34 +393,43 @@
               <!-- Mobile Gradients -->
               <img
                 class="tablet:hidden absolute top-0 left-0 -z-10"
-                src="./images/cards/mobile-tl-gradient.png"
+                src="./images/app/mobile-tl-gradient.png"
                 alt="image"
               />
               <img
-                class="tablet:hidden absolute top-[4%] right-0 -z-10 min-[560px]:top-[20%]"
-                src="./images/cards/mobile-br-gradient.svg"
+                class="tablet:hidden absolute top-0 right-0 -z-10"
+                src="./images/app/right-center-gradient.png"
                 alt="image"
               />
+              <div
+                class="tablet:hidden absolute right-[-150px] bottom-[-150px] -z-10 h-[555px] w-[631px] rounded-full bg-[#160964] blur-[150px]"
+              ></div>
 
               <!-- Desktop Gradients & Imagge -->
               <!-- Desktop Image -->
               <img
-                class="tablet:block laptop:max-w-[440px] laptop:right-10 desktop:top-0 desktop:translate-y-0 absolute top-1/2 right-5 hidden w-full max-w-[300px] -translate-y-1/2"
-                src="./images/cards/hero-cards.png"
+                class="tablet:block laptop:max-w-[548px] desktop:max-w-[748px] absolute -right-0 bottom-0 hidden w-full max-w-[400px]"
+                src="./images/app/hero.png"
                 alt="image"
               />
+
               <!-- Mobile Image -->
-              <div class="tablet:hidden w-full">
+              <div class="tablet:hidden -ml-2 w-full">
                 <img
                   class="mx-auto w-full max-w-full"
-                  src="./images/cards/hero-cards-mobile.png"
+                  src="./images/app/hero-mob.png"
                   alt="image"
                 />
               </div>
               <!-- Desktop Gradient -->
               <img
-                class="tablet:block desktop:max-w-[658px] laptop:h-[420px] desktop:h-[490px] desktop:right-0 absolute top-0 -right-24 -z-10 hidden h-[400px] w-full"
-                src="./images/cards/desktop-gradient.png"
+                class="tablet:block laptop:max-w-[660px] absolute right-0 bottom-0 -z-10 hidden w-full max-w-[500px]"
+                src="./images/app/bottom-desktop.png"
+                alt="image"
+              />
+              <img
+                class="tablet:block laptop:right-[100px] laptop:max-w-[590px] absolute top-0 -right-24 -z-10 hidden w-full"
+                src="./images/app/top-desktop.png"
                 alt="image"
               />
 
@@ -430,9 +439,7 @@
                 <h1
                   class="tablet:max-w-[500px] laptop:max-w-[700px] desktop:max-w-full desktop:text-[48px] desktop:leading-normal max-w-[300px] text-4xl text-white min-[374px]:text-[42px]"
                 >
-                  Cryptographic
-                  <br class="tablet:block desktop:hidden hidden" />
-                  Access Cards
+                  Secure Mobile Credentials
                 </h1>
 
                 <div
@@ -443,35 +450,35 @@
                       class="relative pl-3 after:absolute after:top-3 after:left-0 after:h-[5px] after:w-1 after:rounded-full after:bg-white"
                     >
                       <p class="desktop:text-xl text-white">
-                        Unbreakable cryptographic credentials
+                        Work with any Bluetooth smartphone
                       </p>
                     </li>
                     <li
                       class="relative pl-3 after:absolute after:top-3 after:left-0 after:h-[5px] after:w-1 after:rounded-full after:bg-white"
                     >
                       <p class="desktop:text-xl text-white">
-                        State-of-the-art public key cryptography
+                        Challenge-response authentication
                       </p>
                     </li>
                     <li
                       class="relative pl-3 after:absolute after:top-3 after:left-0 after:h-[5px] after:w-1 after:rounded-full after:bg-white"
                     >
                       <p class="desktop:text-xl text-white">
-                        Compatible with all access systems
+                        Intuitive apps for iOS and Android
                       </p>
                     </li>
                     <li
                       class="relative pl-3 after:absolute after:top-3 after:left-0 after:h-[5px] after:w-1 after:rounded-full after:bg-white"
                     >
                       <p class="desktop:text-xl text-white">
-                        Simplfied "No PKI" architecture
+                        Simple enrollment to all access systems
                       </p>
                     </li>
                     <li
                       class="relative pl-3 after:absolute after:top-3 after:left-0 after:h-[5px] after:w-1 after:rounded-full after:bg-white"
                     >
                       <p class="desktop:text-xl text-white">
-                        Easy enrollment into popular PACS
+                        Optional multi-factor authentication
                       </p>
                     </li>
                   </ul>
@@ -488,15 +495,15 @@
               <li class="flex gap-4 rounded-[20px] bg-white p-5">
                 <img
                   class="desktop:size-[60px] size-11 shrink-0"
-                  src="./images/icons/bank-cards.svg"
+                  src="./images/icons/bluetoth.svg"
                   alt="icon"
                 />
                 <p
                   class="desktop:text-xl pr-[6px] text-base tracking-[-0.2px] text-purple-400"
                 >
-                  iPass access cards use state-of-the-art public key
-                  cryptography to implement unbreakable credentials without
-                  complex public key infrastructure.
+                  iPass mobile credentials allow any Bluetooth smartphone to be
+                  used for physical access via a simple and intuitive app for
+                  iOS and Android.
                 </p>
               </li>
               <li class="flex gap-4 rounded-[20px] bg-white p-5">
@@ -508,33 +515,83 @@
                 <p
                   class="desktop:text-xl text-base tracking-[-0.2px] text-purple-400"
                 >
-                  iPass access cards couple unique private keys that never leave
-                  the card with matching public keys that can be exposed without
-                  risk.
+                  iPass mobile credentials optionally support multi-factor
+                  authentication, by checking a PIN code or performing facial
+                  recognition or fingerprint matching.
                 </p>
               </li>
               <li class="flex gap-4 rounded-[20px] bg-white p-5">
                 <img
                   class="desktop:size-[60px] size-11 shrink-0"
-                  src="./images/icons/mdi_key-wireless.png"
+                  src="./images/icons/phone.svg"
                   alt="icon"
                 />
                 <p
                   class="desktop:text-xl text-base tracking-[-0.2px] text-purple-400"
                 >
-                  iPass access cards and iPass readers are compatible with all
-                  modern access control systems using Wiegand or OSDP
-                  connectivity.
+                  iPass utilities enroll credentials into any access system,
+                  enabling secure access via users’ phones without the need for
+                  smart cards or access keys.
                 </p>
               </li>
             </ul>
           </div>
         </section>
 
+        <!-- Intuitive Mobility -->
+        <section class="laptop:mt-[60px] mt-2.5">
+          <div class="container">
+            <div
+              class="laptop:h-[488px] relative z-0 overflow-hidden rounded-[30px] bg-white p-2.5"
+            >
+              <div
+                class="laptop:block laptop:absolute laptop:top-2.5 laptop:right-2.5 laptop:-z-10 laptop:pl-[30px] bottom-0 hidden overflow-hidden rounded-r-[20px]"
+              >
+                <img
+                  class="laptop:h-[468px] h-auto w-full max-w-full rounded-r-[20px]"
+                  src="./images/app/man-desktop.png"
+                  alt="image"
+                />
+              </div>
+
+              <div>
+                <div class="laptop:hidden">
+                  <img
+                    class="h-auto w-full max-w-full rounded-3xl"
+                    src="./images/app/man-mobile.png"
+                    alt="man"
+                  />
+                </div>
+                <div
+                  class="laptop:w-full tablet:p-[30px] laptop:max-w-[404px] space-y-2.5 rounded-[20px] bg-white p-5"
+                >
+                  <h2 class="text-gray-600">
+                    Intuitive
+                    <br />
+                    Mobility
+                  </h2>
+                  <p class="text-2xl font-semibold text-gray-400">
+                    iPass Mobile Credentials
+                  </p>
+                  <p class="text-gray-600">
+                    Leverage Bluetooth smartphones or watches as secure access
+                    credentials with iPass Mobile Credentials. Our intuitive
+                    iPass App, available for both iOS and Android, allows for
+                    quick and easy enrollment and credential generation. With
+                    support for multi-factor authentication, including PIN
+                    codes, facial recognition, and fingerprint matching, our
+                    mobile credentials offers flexible security levels to meet
+                    the most stringent security requirements
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Contactless Card -->
         <section class="mt-2.5">
           <div class="container">
-            <h2 class="mb-5 text-blue-950">Our Cards</h2>
             <div
               class="laptop:grid-cols-2 grid items-center gap-5 rounded-[30px] bg-white p-2.5"
             >
@@ -789,301 +846,6 @@
                 <!-- Buttons -->
                 <div
                   class="mt-auto flex flex-col flex-wrap justify-end gap-2.5 pt-5 min-[374px]:flex-row"
-                >
-                  <a
-                    href="#"
-                    class="btn btn-secondary w-full max-w-full min-[374px]:max-w-fit"
-                  >
-                    Compare All
-                  </a>
-                  <a
-                    href="#"
-                    class="btn btn-primary w-full max-w-full min-[374px]:max-w-fit"
-                  >
-                    Questions?
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Dual Interface Card -->
-        <section class="mt-[60px]">
-          <div class="container">
-            <div
-              class="laptop:grid-cols-2 grid items-center gap-5 rounded-[30px] bg-white p-2.5"
-            >
-              <!-- Image -->
-              <div class="overflow-hidden rounded-[20px]">
-                <div class="relative">
-                  <!-- Slider main container -->
-                  <div class="swiper swiper-mullion-reader">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                      <!-- Slides -->
-                      <div class="swiper-slide">
-                        <div class="flex items-center justify-center">
-                          <img
-                            src="./images/cards/card-slide-image-2.png"
-                            alt="reader image"
-                          />
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="flex items-center justify-center">
-                          <img
-                            src="./images/cards/card-slide-image-2.png"
-                            alt="reader image"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="flex items-center justify-center">
-                          <img
-                            src="./images/cards/card-slide-image-2.png"
-                            alt="reader image"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Slider Buttons -->
-                  <button
-                    class="mullion-reader-prev absolute top-1/2 left-0 z-10 flex size-12 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-purple-300/50"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="29"
-                      height="29"
-                      viewBox="0 0 29 29"
-                      fill="none"
-                    >
-                      <path
-                        d="M18.5 4L8.5 14L18.5 24"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-
-                  <button
-                    class="mullion-reader-next absolute top-1/2 right-0 z-10 flex size-12 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-purple-300/50"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="29"
-                      height="29"
-                      viewBox="0 0 29 29"
-                      fill="none"
-                    >
-                      <path
-                        d="M10.5 25L20.5 15L10.5 5"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Info -->
-              <div class="flex flex-col rounded-[20px] bg-gray-200 p-[30px]">
-                <h3 class="laptop:text-3xl text-gray-600">
-                  Dual Interface Card
-                </h3>
-                <p class="mt-1 text-sm text-gray-600">
-                  iPass PKC20 dual interface access cards also include a contact
-                  interface and support multi-factor PIN-to-card authentication.
-                </p>
-
-                <!-- [START] HTML Tabs -->
-                <div class="tabs mt-[30px]">
-                  <div class="tabs-header flex items-center gap-2.5">
-                    <button class="tab-trigger active group cursor-pointer">
-                      <span
-                        class="rounded-[10px] bg-gray-100 px-2.5 py-[5px] text-sm text-purple-400 transition-colors group-hover:bg-purple-300 group-hover:text-white group-[.active]:bg-purple-400 group-[.active]:text-white"
-                      >
-                        Features
-                      </span>
-                    </button>
-                    <button class="tab-trigger group cursor-pointer">
-                      <span
-                        class="rounded-[10px] bg-gray-100 px-2.5 py-[5px] text-sm text-purple-400 transition-colors group-hover:bg-purple-300 group-hover:text-white group-[.active]:bg-purple-400 group-[.active]:text-white"
-                      >
-                        Specifications
-                      </span>
-                    </button>
-                  </div>
-
-                  <div class="tabs-content mt-5">
-                    <div class="tab-content animate-fadeIn transition-all">
-                      <ul>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">
-                            Dual interface access smart card
-                          </p>
-                          <p class="text-sm text-gray-600">
-                            <img
-                              src="./images/icons/list-check.svg"
-                              alt="list check"
-                            />
-                          </p>
-                        </li>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">
-                            Public key cryptography
-                          </p>
-                          <p class="text-sm text-gray-600">
-                            <img
-                              src="./images/icons/list-check.svg"
-                              alt="list check"
-                            />
-                          </p>
-                        </li>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">
-                            Contactless NFC interface
-                          </p>
-                          <p class="text-sm text-gray-600">
-                            <img
-                              src="./images/icons/list-check.svg"
-                              alt="list check"
-                            />
-                          </p>
-                        </li>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">Contact interface</p>
-                          <p class="text-sm text-gray-600">
-                            <img
-                              src="./images/icons/list-check.svg"
-                              alt="list check"
-                            />
-                          </p>
-                        </li>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">
-                            Challenge-response authentication
-                          </p>
-                          <p class="text-sm text-gray-600">
-                            <img
-                              src="./images/icons/list-check.svg"
-                              alt="list check"
-                            />
-                          </p>
-                        </li>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">
-                            Printable blank white finish
-                          </p>
-                          <p class="text-sm text-gray-600">
-                            <img
-                              src="./images/icons/list-check.svg"
-                              alt="list check"
-                            />
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                    <div
-                      class="tab-content animate-fadeIn hidden transition-all"
-                    >
-                      <ul>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">
-                            Contactless protocol
-                          </p>
-                          <p class="shrink-0 text-sm text-gray-600">
-                            ISO 14443A
-                          </p>
-                        </li>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">
-                            Communication frequency
-                          </p>
-                          <p class="shrink-0 text-sm text-gray-600">13.5MHz</p>
-                        </li>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">Sensing distance</p>
-                          <p class="shrink-0 text-sm text-gray-600">2.5~10mm</p>
-                        </li>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">Contact interface</p>
-                          <p class="shrink-0 text-sm text-gray-600">
-                            ISO 7816-3
-                          </p>
-                        </li>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">
-                            Public-key algorithm
-                          </p>
-                          <p class="shrink-0 text-sm text-gray-600">
-                            ECC P-256
-                          </p>
-                        </li>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">
-                            Dimensions (inches)
-                          </p>
-                          <p class="shrink-0 text-sm text-gray-600">
-                            3.38x2.13x0.03
-                          </p>
-                        </li>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">Dimensions (mm)</p>
-                          <p class="shrink-0 text-sm text-gray-600">
-                            85.5x54x0.8
-                          </p>
-                        </li>
-                        <li
-                          class="flex items-center justify-between gap-2.5 border-b border-b-gray-400 py-[5px] first:pt-0 last:border-b-0"
-                        >
-                          <p class="text-sm text-gray-600">Card material</p>
-                          <p class="shrink-0 text-sm text-gray-600">
-                            PVC laminate
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- [END] HTML Tabs -->
-
-                <!-- Buttons -->
-                <div
-                  class="mt-auto flex flex-col flex-wrap justify-end gap-2.5 pt-[30px] min-[374px]:flex-row"
                 >
                   <a
                     href="#"
