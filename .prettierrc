@@ -1,6 +1,6 @@
 {
-  "useTabs": false,
-  "semi": false,
-  "htmlWhitespaceSensitivity": "ignore",
-  "plugins": ["prettier-plugin-tailwindcss"]
+	"useTabs": true,
+	"semi": false,
+	"htmlWhitespaceSensitivity": "ignore",
+	"plugins": ["prettier-plugin-tailwindcss"]
 }
