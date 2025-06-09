@@ -318,6 +318,9 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
   .mt-\[30px\] {
     margin-top: 30px;
   }
@@ -389,8 +392,17 @@
   .h-\[555px\] {
     height: 555px;
   }
+  .h-\[600px\] {
+    height: 600px;
+  }
+  .h-\[620px\] {
+    height: 620px;
+  }
   .h-\[804px\] {
     height: 804px;
+  }
+  .h-\[900px\] {
+    height: 900px;
   }
   .h-auto {
     height: auto;
@@ -437,8 +449,29 @@
   .max-w-\[500px\] {
     max-width: 500px;
   }
+  .max-w-\[658px\] {
+    max-width: 658px;
+  }
+  .max-w-\[688px\] {
+    max-width: 688px;
+  }
+  .max-w-\[708px\] {
+    max-width: 708px;
+  }
+  .max-w-\[728px\] {
+    max-width: 728px;
+  }
+  .max-w-\[748px\] {
+    max-width: 748px;
+  }
+  .max-w-\[900px\] {
+    max-width: 900px;
+  }
   .max-w-\[1132px\] {
     max-width: 1132px;
+  }
+  .max-w-\[1900px\] {
+    max-width: 1900px;
   }
   .max-w-full {
     max-width: 100%;
@@ -706,6 +739,9 @@
   .px-2\.5 {
     padding-inline: calc(var(--spacing) * 2.5);
   }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -721,11 +757,17 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
   .py-\[5px\] {
     padding-block: 5px;
+  }
+  .pt-0 {
+    padding-top: calc(var(--spacing) * 0);
   }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
@@ -1103,6 +1145,11 @@
       display: block;
     }
   }
+  .tablet\:flex {
+    @media (width >= 768px) {
+      display: flex;
+    }
+  }
   .tablet\:grid {
     @media (width >= 768px) {
       display: grid;
@@ -1168,9 +1215,19 @@
       flex-direction: row;
     }
   }
+  .tablet\:items-center {
+    @media (width >= 768px) {
+      align-items: center;
+    }
+  }
   .tablet\:justify-between {
     @media (width >= 768px) {
       justify-content: space-between;
+    }
+  }
+  .tablet\:justify-end {
+    @media (width >= 768px) {
+      justify-content: flex-end;
     }
   }
   .tablet\:justify-start {
@@ -1336,6 +1393,11 @@
       height: 500px;
     }
   }
+  .laptop\:h-auto {
+    @media (width >= 1024px) {
+      height: auto;
+    }
+  }
   .laptop\:h-full {
     @media (width >= 1024px) {
       height: 100%;
@@ -1396,6 +1458,11 @@
       max-width: 700px;
     }
   }
+  .laptop\:max-w-\[748px\] {
+    @media (width >= 1024px) {
+      max-width: 748px;
+    }
+  }
   .laptop\:max-w-full {
     @media (width >= 1024px) {
       max-width: 100%;
@@ -1452,6 +1519,17 @@
       border-bottom-left-radius: 0;
     }
   }
+  .laptop\:border-\[10px\] {
+    @media (width >= 1024px) {
+      border-style: var(--tw-border-style);
+      border-width: 10px;
+    }
+  }
+  .laptop\:border-\[\#E0E0E0\] {
+    @media (width >= 1024px) {
+      border-color: #E0E0E0;
+    }
+  }
   .laptop\:bg-white {
     @media (width >= 1024px) {
       background-color: var(--color-white);
@@ -1468,6 +1546,11 @@
       padding: calc(var(--spacing) * 14);
     }
   }
+  .laptop\:p-\[60px\] {
+    @media (width >= 1024px) {
+      padding: 60px;
+    }
+  }
   .laptop\:px-16 {
     @media (width >= 1024px) {
       padding-inline: calc(var(--spacing) * 16);
@@ -1476,6 +1559,11 @@
   .laptop\:px-\[30px\] {
     @media (width >= 1024px) {
       padding-inline: 30px;
+    }
+  }
+  .laptop\:px-\[60px\] {
+    @media (width >= 1024px) {
+      padding-inline: 60px;
     }
   }
   .laptop\:py-12 {
@@ -1491,6 +1579,31 @@
   .laptop\:pr-0 {
     @media (width >= 1024px) {
       padding-right: calc(var(--spacing) * 0);
+    }
+  }
+  .laptop\:pb-0 {
+    @media (width >= 1024px) {
+      padding-bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .laptop\:pb-3 {
+    @media (width >= 1024px) {
+      padding-bottom: calc(var(--spacing) * 3);
+    }
+  }
+  .laptop\:pb-4 {
+    @media (width >= 1024px) {
+      padding-bottom: calc(var(--spacing) * 4);
+    }
+  }
+  .laptop\:pb-5 {
+    @media (width >= 1024px) {
+      padding-bottom: calc(var(--spacing) * 5);
+    }
+  }
+  .laptop\:pb-10 {
+    @media (width >= 1024px) {
+      padding-bottom: calc(var(--spacing) * 10);
     }
   }
   .laptop\:pl-\[30px\] {
@@ -1644,6 +1757,11 @@
   .desktop\:pb-\[74px\] {
     @media (width >= 1430px) {
       padding-bottom: 74px;
+    }
+  }
+  .desktop\:pl-20 {
+    @media (width >= 1430px) {
+      padding-left: calc(var(--spacing) * 20);
     }
   }
   .desktop\:pl-\[90px\] {
