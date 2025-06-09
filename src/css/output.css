@@ -1258,6 +1258,11 @@
       }
     }
   }
+  .tablet\:bg-\[url\(\'\.\.\/images\/home\/mobility-bg\.png\'\)\] {
+    @media (width >= 768px) {
+      background-image: url('../images/home/mobility-bg.png');
+    }
+  }
   .tablet\:bg-\[url\(\'\.\.\/images\/home\/universal-bg\.png\'\)\] {
     @media (width >= 768px) {
       background-image: url('../images/home/universal-bg.png');
@@ -1356,6 +1361,11 @@
   .laptop\:mt-\[60px\] {
     @media (width >= 1024px) {
       margin-top: 60px;
+    }
+  }
+  .laptop\:mb-\[200px\] {
+    @media (width >= 1024px) {
+      margin-bottom: 200px;
     }
   }
   .laptop\:block {
@@ -1604,6 +1614,11 @@
   .laptop\:pb-10 {
     @media (width >= 1024px) {
       padding-bottom: calc(var(--spacing) * 10);
+    }
+  }
+  .laptop\:pb-\[200px\] {
+    @media (width >= 1024px) {
+      padding-bottom: 200px;
     }
   }
   .laptop\:pl-\[30px\] {
