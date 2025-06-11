@@ -80,7 +80,7 @@
 @layer utilities {
 	/* Mobile Menu With Drawer */
 	.mobile-menu.open {
-		@apply left-0;
+		@apply right-0;
 	}
 	/* Buttons */
 	.btn-secondary {
