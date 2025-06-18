@@ -794,64 +794,89 @@
 						<div
 							class="tablet:gap-5 grid gap-2.5 rounded-[30px] bg-white p-2.5"
 						>
-							<!-- Left Side -->
+							<!-- First Item -->
 							<div
-								class="desktop:py-12 desktop:px-[98px] relative z-0 flex flex-col overflow-hidden rounded-[20px] bg-purple-400 p-5"
+								class="tablet:flex-row tablet:items-center tablet:justify-between relative z-0 flex flex-col overflow-hidden rounded-[20px] bg-purple-400 p-5"
 							>
 								<img
-									class="absolute inset-0 -z-10"
+									class="tablet:hidden absolute top-0 left-0 -z-10 h-full w-full max-w-full"
 									src="./images/faq/left-mob.png"
 									alt="img"
 								/>
+								<img
+									class="tablet:block absolute top-0 left-0 -z-10 hidden h-full w-full max-w-full"
+									src="./images/faq/left-desktop.png"
+									alt="img"
+								/>
 								<h3
-									class="laptop:text-[42px] laptop:leading-normal tablet:text-center text-white"
+									class="laptop:text-[42px] laptop:leading-normal text-2xl text-white"
 								>
 									Still no answer?
 								</h3>
 								<div
-									class="mt-auto ml-auto grid max-w-[286px] grid-cols-2 gap-3 pt-5 min-[374px]:flex min-[374px]:justify-between"
+									class="tablet:ml-0 tablet:pt-0 grid grid-cols-2 gap-3 pt-5 min-[374px]:ml-auto min-[374px]:flex min-[374px]:max-w-[286px] min-[374px]:justify-between"
 								>
 									<a
 										href="#"
-										class="btn btn-secondary-white max-w-full bg-white text-purple-400! hover:bg-purple-300! hover:text-white!"
+										class="btn btn-secondary-white max-w-full bg-white text-purple-400! hover:border-purple-300! hover:bg-purple-300! hover:text-white!"
 									>
 										Email
 									</a>
 									<a href="#" class="btn btn-secondary-white max-w-full">
 										Call
 									</a>
-									<a href="#" class="btn btn-primary col-span-2 max-w-full">
+									<a
+										href="#"
+										class="btn btn-primary col-span-2 max-w-full hover:bg-white! hover:text-purple-400!"
+									>
 										Contact
 									</a>
 								</div>
 							</div>
-							<!-- Right Side -->
+							<!-- Second Item -->
 							<div
-								class="tablet:p-5 tablet:order-1 desktop:py-12 desktop:px-[98px] relative z-0 flex flex-col overflow-hidden rounded-[20px] bg-blue-950 p-2.5"
+								class="relative z-0 flex items-center justify-between overflow-hidden rounded-[20px] bg-gray-200 p-5"
 							>
 								<img
-									class="desktop:hidden absolute right-0 bottom-0 -z-10 h-[244px] w-full"
-									src="./images/readers/cta-compare-gradient.png"
+									class="tablet:hidden absolute top-1/2 right-0 -z-10 h-full -translate-y-1/2"
+									src="./images/faq/right-mob.png"
 									alt="gradient"
 								/>
 								<img
-									class="desktop:block absolute right-0 bottom-0 -z-10 hidden h-[264px] w-full"
-									src="./images/readers/cta-compare-gradient-desktop.png"
+									class="tablet:block absolute top-1/2 right-0 -z-10 hidden h-full -translate-y-1/2"
+									src="./images/faq/right-desktop.png"
 									alt="gradient"
 								/>
 								<h3
-									class="laptop:text-[42px] laptop:leading-normal tablet:text-center text-white"
+									class="laptop:text-[42px] laptop:leading-normal tablet:text-center text-2xl text-purple-400"
 								>
-									Compare All Models
+									Compare Readers Models
 								</h3>
-								<div
-									class="mt-auto pt-5 min-[374px]:flex min-[374px]:justify-end"
-								>
+								<div class="min-[374px]:flex min-[374px]:justify-end">
 									<a
 										href="#"
-										class="btn btn-secondary-white max-w-full min-[374px]:max-w-fit"
+										class="btn btn-secondary-white group size-[50px] rounded-full p-2.5"
 									>
-										Compare All
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="29"
+											height="29"
+											viewBox="0 0 29 29"
+											fill="none"
+										>
+											<path
+												d="M10.5 25L20.5 15L10.5 25ZM20.5 15L10.5 5L20.5 15Z"
+												fill="white"
+											/>
+											<path
+												d="M10.5 25L20.5 15L10.5 5"
+												stroke="white"
+												class="transition-colors group-hover:stroke-purple-400"
+												stroke-width="3"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
 									</a>
 								</div>
 							</div>
