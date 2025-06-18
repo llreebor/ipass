@@ -58,142 +58,8 @@ function initializeMobileMenu() {
 	})
 }
 initializeMobileMenu()
-// ====================== Home Page ==============================
-// Home Page Form Visibility
-function showHomeForm() {
-	const inputs = document.querySelectorAll(".show-form-checkbox")
-	const form = document.getElementById("contact-form")
 
-	function updateFormVisibility() {
-		// Check if at least one checkbox is checked
-		const isAnyChecked = Array.from(inputs).some((input) => input.checked)
-
-		if (isAnyChecked) {
-			form.classList.add("flex")
-			form.classList.remove("hidden")
-		} else {
-			form.classList.add("hidden")
-			form.classList.remove("flex")
-		}
-	}
-
-	// Add event listener to each checkbox
-	inputs.forEach((input) => {
-		input.addEventListener("input", updateFormVisibility)
-	})
-
-	if (form) {
-		// Initial check when the function runs
-		updateFormVisibility()
-	}
-}
-// showHomeForm()
-
-// ============= Multi-Technology Access Readers =================
-//Tabs
-function toggleTabs() {
-	// Get all elements with class 'tabs'
-	const allTabs = document.querySelectorAll(".tabs")
-
-	// Loop through each tabs container
-	allTabs.forEach((tabs) => {
-		// Get all the tabs triggers and contents within this specific tabs container
-		const tabsTriggers = tabs.querySelectorAll(".tab-trigger")
-		const tabsContents = tabs.querySelectorAll(".tab-content")
-
-		// Add a click event listener to each tabs trigger within this container
-		tabsTriggers.forEach((trigger, index) => {
-			trigger.addEventListener("click", () => {
-				// Remove the "active" class from all tabs triggers in this container
-				tabsTriggers.forEach((trigger) => trigger.classList.remove("active"))
-				// Add the "active" class to the clicked tabs trigger
-				trigger.classList.add("active")
-
-				// Hide all tabs contents in this container
-				tabsContents.forEach((content) => content.classList.add("hidden"))
-				// Show the corresponding tabs content
-				tabsContents[index].classList.remove("hidden")
-			})
-		})
-	})
-}
-toggleTabs()
-
-if (document.querySelectorAll(".swiper").length) {
-	new Swiper(".swiper-smart-access-reader", {
-		// Optional parameters
-		slidesPerView: 1,
-		loop: true,
-		autoHeight: true,
-
-		// Navigation arrows
-		navigation: {
-			nextEl: ".smart-access-reader-next",
-			prevEl: ".smart-access-reader-prev",
-		},
-		breakpoints: {
-			1025: {
-				autoHeight: false,
-			},
-		},
-	})
-
-	new Swiper(".swiper-mullion-reader", {
-		// Optional parameters
-		slidesPerView: 1,
-		loop: true,
-		autoHeight: true,
-
-		// Navigation arrows
-		navigation: {
-			nextEl: ".mullion-reader-next",
-			prevEl: ".mullion-reader-prev",
-		},
-		breakpoints: {
-			1025: {
-				autoHeight: false,
-			},
-		},
-	})
-
-	new Swiper(".swiper-keypad-reader", {
-		// Optional parameters
-		slidesPerView: 1,
-		loop: true,
-		autoHeight: true,
-
-		// Navigation arrows
-		navigation: {
-			nextEl: ".keypad-reader-next",
-			prevEl: ".keypad-reader-prev",
-		},
-		breakpoints: {
-			1025: {
-				autoHeight: false,
-			},
-		},
-	})
-
-	new Swiper(".swiper-dual-reader", {
-		// Optional parameters
-		slidesPerView: 1,
-		loop: true,
-		autoHeight: true,
-
-		// Navigation arrows
-		navigation: {
-			nextEl: ".dual-reader-next",
-			prevEl: ".dual-reader-prev",
-		},
-		breakpoints: {
-			1025: {
-				autoHeight: false,
-			},
-		},
-	})
-}
-
-// FAQ
+// ======================= FAQ Page ==============================
 // Initialize accordion functionality
 function initializeAccordion() {
 	// Select the accordion container (assuming items are inside a common parent)
@@ -271,3 +137,108 @@ function initializeAccordion() {
 	})
 }
 initializeAccordion()
+
+// ============= Multi-Technology Access Readers =================
+//Tabs
+function toggleTabs() {
+	// Get all elements with class 'tabs'
+	const allTabs = document.querySelectorAll(".tabs")
+
+	// Loop through each tabs container
+	allTabs.forEach((tabs) => {
+		// Get all the tabs triggers and contents within this specific tabs container
+		const tabsTriggers = tabs.querySelectorAll(".tab-trigger")
+		const tabsContents = tabs.querySelectorAll(".tab-content")
+
+		// Add a click event listener to each tabs trigger within this container
+		tabsTriggers.forEach((trigger, index) => {
+			trigger.addEventListener("click", () => {
+				// Remove the "active" class from all tabs triggers in this container
+				tabsTriggers.forEach((trigger) => trigger.classList.remove("active"))
+				// Add the "active" class to the clicked tabs trigger
+				trigger.classList.add("active")
+
+				// Hide all tabs contents in this container
+				tabsContents.forEach((content) => content.classList.add("hidden"))
+				// Show the corresponding tabs content
+				tabsContents[index].classList.remove("hidden")
+			})
+		})
+	})
+}
+toggleTabs()
+
+// Sliders
+if (document.querySelectorAll(".swiper").length) {
+	new Swiper(".swiper-smart-access-reader", {
+		// Optional parameters
+		slidesPerView: 1,
+		loop: true,
+		autoHeight: true,
+
+		// Navigation arrows
+		navigation: {
+			nextEl: ".smart-access-reader-next",
+			prevEl: ".smart-access-reader-prev",
+		},
+		breakpoints: {
+			1025: {
+				autoHeight: false,
+			},
+		},
+	})
+
+	new Swiper(".swiper-mullion-reader", {
+		// Optional parameters
+		slidesPerView: 1,
+		loop: true,
+		autoHeight: true,
+
+		// Navigation arrows
+		navigation: {
+			nextEl: ".mullion-reader-next",
+			prevEl: ".mullion-reader-prev",
+		},
+		breakpoints: {
+			1025: {
+				autoHeight: false,
+			},
+		},
+	})
+
+	new Swiper(".swiper-keypad-reader", {
+		// Optional parameters
+		slidesPerView: 1,
+		loop: true,
+		autoHeight: true,
+
+		// Navigation arrows
+		navigation: {
+			nextEl: ".keypad-reader-next",
+			prevEl: ".keypad-reader-prev",
+		},
+		breakpoints: {
+			1025: {
+				autoHeight: false,
+			},
+		},
+	})
+
+	new Swiper(".swiper-dual-reader", {
+		// Optional parameters
+		slidesPerView: 1,
+		loop: true,
+		autoHeight: true,
+
+		// Navigation arrows
+		navigation: {
+			nextEl: ".dual-reader-next",
+			prevEl: ".dual-reader-prev",
+		},
+		breakpoints: {
+			1025: {
+				autoHeight: false,
+			},
+		},
+	})
+}
