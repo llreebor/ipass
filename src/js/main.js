@@ -242,3 +242,27 @@ if (document.querySelectorAll(".swiper").length) {
 		},
 	})
 }
+
+// ==================== Contact Us Page ===========================
+// Copy contacts to clipboard
+function copyToClipbord() {
+	const btns = document.querySelectorAll(".copy-btn")
+
+	btns.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			const card = btn.closest(".copy-card")
+			const textEl = card.querySelector(".copy-text")
+			const text = textEl.textContent.trim()
+
+			if (text) {
+				navigator.clipboard.writeText(text).then(() => {
+					btn.classList.add("show-tooltip")
+					setTimeout(() => {
+						btn.classList.remove("show-tooltip")
+					}, 1500)
+				})
+			}
+		})
+	})
+}
+copyToClipbord()

@@ -44,7 +44,6 @@
 		}
 	}
 }
-
 @layer base {
 	h1 {
 		@apply tablet:text-4xl laptop:text-5xl text-3xl leading-tight font-semibold;
@@ -57,6 +56,9 @@
 	}
 	body {
 		@apply font-openSans bg-gray-100;
+	}
+	button {
+		@apply cursor-pointer;
 	}
 }
 
@@ -94,4 +96,26 @@
 	.btn-primary {
 		@apply border-purple-300 bg-purple-300 text-white hover:border-purple-400 hover:bg-purple-400;
 	}
+}
+
+/* Tooltip */
+.copy-btn[data-tooltip]::after {
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: 125%; /* above the button */
+	left: 50%;
+	transform: translateX(-50%);
+	background: #222;
+	color: #fff;
+	padding: 5px 8px;
+	border-radius: 4px;
+	font-size: 12px;
+	white-space: nowrap;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s ease;
+	z-index: 10;
+}
+.copy-btn.show-tooltip[data-tooltip]::after {
+	opacity: 1;
 }
