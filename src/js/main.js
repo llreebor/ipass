@@ -266,3 +266,38 @@ function copyToClipbord() {
 	})
 }
 copyToClipbord()
+
+// Select
+function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
+	const customSelect = document.getElementById(selectId)
+	const selectedOption = document.getElementById(selectedOptionId)
+	const customOptions = document.getElementById(optionsId)
+	const options = customOptions.getElementsByClassName("option")
+
+	customSelect.addEventListener("click", () => {
+		customOptions.classList.toggle("hidden")
+		const arrow = customSelect.querySelector(".arrow svg")
+		arrow.style.transform = customOptions.classList.contains("hidden")
+			? "rotate(0deg)"
+			: "rotate(180deg)"
+	})
+
+	for (let option of options) {
+		option.addEventListener("click", () => {
+			selectedOption.innerText = option.innerText
+			customOptions.classList.add("hidden")
+			const arrow = customSelect.querySelector(".arrow svg")
+			arrow.style.transform = "rotate(0deg)"
+		})
+	}
+
+	document.addEventListener("click", (event) => {
+		const target = event.target
+		if (!customSelect.contains(target) && !customOptions.contains(target)) {
+			customOptions.classList.add("hidden")
+			const arrow = customSelect.querySelector(".arrow svg")
+			arrow.style.transform = "rotate(0deg)"
+		}
+	})
+}
+initializeCustomSelect("area-select", "area-options", "area-selected-option")

@@ -395,15 +395,14 @@
 					</div>
 				</section>
 
-				<!-- Contact List & Form -->
+				<!-- Contact List  -->
 				<section class="laptop:mt-[30px]">
 					<div class="container">
-						<!-- Contact List -->
 						<div
 							class="tablet:grid-cols-2 grid gap-2.5 min-[1250px]:grid-cols-4"
 						>
 							<div
-								class="copy-card flex items-center justify-between gap-5 rounded-[20px] bg-purple-400 pr-2.5 pl-5 min-[340px]:h-16"
+								class="copy-card flex h-16 items-center justify-between gap-5 rounded-[20px] bg-purple-400 pr-2.5 pl-5"
 							>
 								<p
 									class="copy-text laptop:text-lg desktop:text-xl text-xl text-white"
@@ -433,7 +432,7 @@
 								</button>
 							</div>
 							<div
-								class="copy-card flex items-center justify-between gap-5 rounded-[20px] bg-purple-400 pr-[5px] pl-5 min-[340px]:h-16"
+								class="copy-card flex h-16 items-center justify-between gap-5 rounded-[20px] bg-purple-400 pr-[5px] pl-5"
 							>
 								<p
 									class="copy-text laptop:text-lg desktop:text-xl text-xl text-white"
@@ -456,7 +455,7 @@
 								</div>
 							</div>
 							<div
-								class="copy-card flex items-center justify-between gap-5 rounded-[20px] bg-purple-400 py-[5px] pr-[5px] pl-5 min-[340px]:h-16"
+								class="copy-card flex h-16 items-center justify-between gap-5 rounded-[20px] bg-purple-400 py-[5px] pr-[5px] pl-5"
 							>
 								<p
 									class="copy-text laptop:text-lg desktop:text-xl text-xl text-white"
@@ -477,6 +476,203 @@
 										<img src="./images/icons/phone-icon.svg" alt="phone icon" />
 									</a>
 								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Contact Form -->
+				<section class="overflow-hidden">
+					<div class="container">
+						<!-- Form -->
+						<div
+							class="shadow-form laptop:max-w-[1107px] laptop:mt-[30px] laptop:pt-12 laptop:pl-[112px] relative mt-[120px] rounded-[20px] bg-purple-400 px-4 pt-[90px] pb-8 min-[340px]:px-8"
+						>
+							<!-- Form Image -->
+							<img
+								class="laptop:max-w-[519px] desktop:max-w-[640px] laptop:w-full laptop:-top-10 laptop:right-[-200px] absolute top-[-144px] -right-5 max-w-[280px]"
+								src="./images/contact-us/form-image.png"
+								alt=""
+							/>
+							<!-- Overlay -->
+							<div
+								class="laptop:left-[unset] laptop:w-[173px] laptop:right-[-173px] laptop:h-auto laptop:top-6 laptop:bottom-6 laptop:rounded-l-none absolute top-[-60px] left-0 -z-10 h-32 w-full rounded-[20px] bg-[#D9D9D9]"
+							></div>
+
+							<div
+								class="laptop:max-w-[632px] laptop:order-1 relative z-0 w-full space-y-5"
+							>
+								<h2 class="text-white">Send Us a Message</h2>
+								<p class="text-white">
+									Need to get in touch? Fill out the form with your inquiry and
+									indicate your area of interest. We’ll get your question to the
+									right place and respond promptly.
+								</p>
+
+								<form action="#" class="space-y-5">
+									<div class="space-y-2.5">
+										<div class="grid grid-cols-2 gap-2.5 min-[340px]:gap-5">
+											<input
+												class="input"
+												type="text"
+												placeholder="First Name*"
+												required
+												name="first_name"
+												id="first_name"
+											/>
+											<input
+												type="text"
+												class="input"
+												placeholder="Last Name*"
+												required
+												name="last_name"
+												id="last_name"
+											/>
+										</div>
+										<div class="grid grid-cols-2 gap-2.5 min-[340px]:gap-5">
+											<input
+												type="text"
+												class="input"
+												placeholder="Company"
+												name="company"
+												id="company"
+											/>
+											<input
+												type="text"
+												class="input"
+												placeholder="Role"
+												name="role"
+												id="role"
+											/>
+										</div>
+										<div class="grid grid-cols-2 gap-2.5 min-[340px]:gap-5">
+											<input
+												type="email"
+												class="input"
+												placeholder="Email*"
+												name="email"
+												id="email"
+												required
+											/>
+											<input
+												type="text"
+												class="input"
+												placeholder="Phone*"
+												name="phone"
+												id="phone"
+												required
+											/>
+										</div>
+										<div class="grid">
+											<!-- [START] HTML Select  -->
+											<div class="relative">
+												<button
+													type="button"
+													id="area-select"
+													class="input w-full cursor-pointer justify-between text-left"
+												>
+													<span
+														id="area-selected-option"
+														class="selected-option text-left text-gray-300"
+													>
+														Select Interest Area
+													</span>
+
+													<div
+														class="arrow absolute top-1/2 right-3 -translate-y-1/2"
+													>
+														<svg
+															class="transition-transform"
+															xmlns="http://www.w3.org/2000/svg"
+															width="29"
+															height="29"
+															viewBox="0 0 29 29"
+															fill="none"
+														>
+															<path
+																d="M3.5 9L13.5 19L23.5 9"
+																stroke="#533ECD"
+																stroke-width="3"
+																stroke-linecap="round"
+																stroke-linejoin="round"
+															/>
+														</svg>
+													</div>
+												</button>
+												<div
+													id="area-options"
+													class="absolute z-10 mt-1 hidden min-w-full transform overflow-hidden rounded-md border border-gray-200 bg-white transition-all duration-300 ease-in-out"
+												>
+													<ul class="grid">
+														<li>
+															<button
+																type="button"
+																class="option w-full px-3 py-2 text-left hover:bg-gray-100"
+															>
+																Custom Value 1
+															</button>
+														</li>
+														<li>
+															<button
+																type="button"
+																class="option w-full px-3 py-2 text-left hover:bg-gray-100"
+															>
+																Custom Value 2
+															</button>
+														</li>
+														<li>
+															<button
+																type="button"
+																class="option w-full px-3 py-2 text-left hover:bg-gray-100"
+															>
+																Custom Value 3
+															</button>
+														</li>
+														<li>
+															<button
+																type="button"
+																class="option w-full px-3 py-2 text-left hover:bg-gray-100"
+															>
+																Custom Value 4
+															</button>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<!-- [END] HTML Select  -->
+										</div>
+										<div class="relative grid">
+											<label
+												for="file"
+												class="absolute top-3 right-3 cursor-pointer rounded bg-purple-400"
+											>
+												<input
+													type="file"
+													id="file"
+													name="file"
+													class="hidden"
+												/>
+												<img
+													src="./images/icons/attach-outline.svg"
+													alt="attach-icon"
+												/>
+											</label>
+											<textarea
+												name="message"
+												id="message"
+												class="input min-h-[145px] pr-4"
+												placeholder="What can we help you with?"
+											></textarea>
+										</div>
+									</div>
+
+									<button
+										type="submit"
+										class="btn btn-primary ml-auto hover:bg-white! hover:text-purple-400!"
+									>
+										Submit
+									</button>
+								</form>
 							</div>
 						</div>
 					</div>

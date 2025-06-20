@@ -28,6 +28,9 @@
 	--color-blue-900: #160964;
 	--color-blue-950: #1b172e;
 
+	/* Shadow */
+	--shadow-form: 0px -11px 31.3px 0px #fff;
+
 	/* Gradients */
 	--home-list-gradient-desktop: 85deg, #fcfcfc 1.89%, #b9b9b9 100%, #fff;
 	--home-list-gradient-mobile: 180deg, #fcfcfc 21.08%, #b9b9b9 100%, #fff;
@@ -75,7 +78,7 @@
 		@apply relative size-6 cursor-pointer appearance-none rounded-full border-2 border-white bg-transparent p-1 after:absolute after:top-1/2 after:left-1/2 after:hidden after:size-3 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:border-0 after:bg-white after:transition-all checked:bg-transparent checked:after:block;
 	}
 	.input {
-		@apply w-full rounded-[20px] border border-gray-200 px-5 py-2.5 text-white outline-white placeholder:text-gray-500;
+		@apply w-full rounded-[20px] border border-gray-200 px-5 py-2.5 text-white outline-white placeholder:text-gray-300;
 	}
 }
 
