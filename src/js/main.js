@@ -248,6 +248,8 @@ if (document.querySelectorAll(".swiper").length) {
 function copyToClipbord() {
 	const btns = document.querySelectorAll(".copy-btn")
 
+	if (!btns.length) return
+
 	btns.forEach((btn) => {
 		btn.addEventListener("click", () => {
 			const card = btn.closest(".copy-card")
@@ -273,6 +275,8 @@ function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
 	const selectedOption = document.getElementById(selectedOptionId)
 	const customOptions = document.getElementById(optionsId)
 	const options = customOptions.getElementsByClassName("option")
+
+	if (!customSelect || !options || !selectedOption || !customOptions) return
 
 	customSelect.addEventListener("click", () => {
 		customOptions.classList.toggle("hidden")
@@ -300,4 +304,6 @@ function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
 		}
 	})
 }
-initializeCustomSelect("area-select", "area-options", "area-selected-option")
+if (document.getElementById("area-select")) {
+	initializeCustomSelect("area-select", "area-options", "area-selected-option")
+}
