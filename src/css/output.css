@@ -342,9 +342,6 @@
   .mt-\[30px\] {
     margin-top: 30px;
   }
-  .mt-\[35px\] {
-    margin-top: 35px;
-  }
   .mt-\[60px\] {
     margin-top: 60px;
   }
@@ -362,9 +359,6 @@
   }
   .-ml-2\.5 {
     margin-left: calc(var(--spacing) * -2.5);
-  }
-  .ml-\[23px\] {
-    margin-left: 23px;
   }
   .ml-auto {
     margin-left: auto;
@@ -452,11 +446,8 @@
   .h-full {
     height: 100%;
   }
-  .max-h-\[88px\] {
-    max-height: 88px;
-  }
-  .min-h-\[88px\] {
-    min-height: 88px;
+  .h-px {
+    height: 1px;
   }
   .min-h-\[145px\] {
     min-height: 145px;
@@ -467,8 +458,14 @@
   .w-1 {
     width: calc(var(--spacing) * 1);
   }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
   .w-1\/4 {
     width: calc(1/4 * 100%);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
   }
   .w-\[30px\] {
     width: 30px;
@@ -479,9 +476,6 @@
   .w-\[90px\] {
     width: 90px;
   }
-  .w-\[120px\] {
-    width: 120px;
-  }
   .w-\[200px\] {
     width: 200px;
   }
@@ -491,14 +485,14 @@
   .w-\[631px\] {
     width: 631px;
   }
-  .w-auto {
-    width: auto;
-  }
   .w-full {
     width: 100%;
   }
   .max-w-\[180px\] {
     max-width: 180px;
+  }
+  .max-w-\[181px\] {
+    max-width: 181px;
   }
   .max-w-\[210px\] {
     max-width: 210px;
@@ -548,9 +542,6 @@
   .shrink-0 {
     flex-shrink: 0;
   }
-  .table-auto {
-    table-layout: auto;
-  }
   .table-fixed {
     table-layout: fixed;
   }
@@ -559,16 +550,6 @@
   }
   .border-separate {
     border-collapse: separate;
-  }
-  .border-spacing-2 {
-    --tw-border-spacing-x: calc(var(--spacing) * 2);
-    --tw-border-spacing-y: calc(var(--spacing) * 2);
-    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
-  }
-  .border-spacing-\[5px\] {
-    --tw-border-spacing-x: 5px;
-    --tw-border-spacing-y: 5px;
-    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
   }
   .border-spacing-x-\[5px\] {
     --tw-border-spacing-x: 5px;
@@ -760,6 +741,10 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+  .rounded-b-\[20px\] {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -775,6 +760,10 @@
   .border-b-\[3px\] {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 3px;
+  }
+  .border-none {
+    --tw-border-style: none;
+    border-style: none;
   }
   .border-gray-200 {
     border-color: var(--color-gray-200);
@@ -861,6 +850,9 @@
   .p-\[30px\] {
     padding: 30px;
   }
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
+  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
@@ -885,9 +877,6 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
-  .py-3 {
-    padding-block: calc(var(--spacing) * 3);
-  }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
@@ -899,9 +888,6 @@
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
-  }
-  .py-\[2px\] {
-    padding-block: 2px;
   }
   .py-\[5px\] {
     padding-block: 5px;
@@ -926,9 +912,6 @@
   }
   .pt-\[30px\] {
     padding-top: 30px;
-  }
-  .pt-\[35px\] {
-    padding-top: 35px;
   }
   .pt-\[50px\] {
     padding-top: 50px;
@@ -977,9 +960,6 @@
   }
   .pl-5 {
     padding-left: calc(var(--spacing) * 5);
-  }
-  .pl-\[23px\] {
-    padding-left: 23px;
   }
   .text-center {
     text-align: center;
@@ -1385,6 +1365,11 @@
       display: flex;
     }
   }
+  .min-\[374px\]\:w-\[90px\] {
+    @media (width >= 374px) {
+      width: 90px;
+    }
+  }
   .min-\[374px\]\:max-w-\[286px\] {
     @media (width >= 374px) {
       max-width: 286px;
@@ -1697,6 +1682,12 @@
     @media (width >= 768px) {
       font-size: var(--text-sm);
       line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
+  .tablet\:text-xl {
+    @media (width >= 768px) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
   .min-\[1023px\]\:h-\[490px\] {
@@ -2135,6 +2126,12 @@
     @media (width >= 1024px) {
       font-size: var(--text-lg);
       line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .laptop\:text-xl {
+    @media (width >= 1024px) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
   .laptop\:text-\[42px\] {
