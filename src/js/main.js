@@ -244,61 +244,124 @@ if (document.querySelectorAll(".swiper").length) {
 }
 
 // ==================== Contact Us Page ===========================
-// Copy contacts to clipboard
-function copyToClipbord() {
-	const btns = document.querySelectorAll(".copy-btn")
+// Initializes clipboard copy functionality for elements with class 'copy-btn'
+function copyToClipboard() {
+	// Select all buttons with the 'copy-btn' class
+	const buttons = document.querySelectorAll(".copy-btn")
 
-	if (!btns.length) return
+	// Exit early if no buttons are found
+	if (!buttons.length) {
+		console.warn("No copy buttons found on the page")
+		return
+	}
 
-	btns.forEach((btn) => {
-		btn.addEventListener("click", () => {
-			const card = btn.closest(".copy-card")
-			const textEl = card.querySelector(".copy-text")
-			const text = textEl.textContent.trim()
+	// Iterate through each copy button
+	buttons.forEach((button) => {
+		// Add click event listener to each button
+		button.addEventListener("click", async () => {
+			// Prevent multiple rapid clicks by disabling the button temporarily
+			if (button.disabled) return
+			button.disabled = true
 
-			if (text) {
-				navigator.clipboard.writeText(text).then(() => {
-					btn.classList.add("show-tooltip")
-					setTimeout(() => {
-						btn.classList.remove("show-tooltip")
-					}, 1500)
-				})
+			try {
+				// Find the closest parent element with class 'copy-card'
+				const card = button.closest(".copy-card")
+				if (!card) {
+					console.error("Copy card not found for button:", button)
+					return
+				}
+
+				// Get the text element to copy from
+				const textElement = card.querySelector(".copy-text")
+				if (!textElement) {
+					console.error("Copy text element not found in card:", card)
+					return
+				}
+
+				// Extract and clean the text content
+				const text = textElement.textContent.trim()
+				if (!text) {
+					console.warn("No text content to copy in element:", textElement)
+					return
+				}
+
+				// Copy text to clipboard using the Clipboard API
+				await navigator.clipboard.writeText(text)
+
+				// Show visual feedback by adding tooltip class
+				button.classList.add("show-tooltip")
+
+				// Remove tooltip after 1.5 seconds
+				setTimeout(() => {
+					button.classList.remove("show-tooltip")
+					button.disabled = false // Re-enable the button
+				}, 1500)
+			} catch (error) {
+				// Handle any errors during clipboard operation
+				console.error("Failed to copy text to clipboard:", error)
+				button.disabled = false // Re-enable the button on error
 			}
 		})
 	})
 }
-copyToClipbord()
+
+// Execute the function when the script loads
+copyToClipboard()
 
 // Select
+// Initializes a custom dropdown select menu with specified elements
+// Parameters:
+// - selectId: ID of the custom select container element
+// - optionsId: ID of the options container element
+// - selectedOptionId: ID of the element displaying the selected option
 function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
+	// Retrieve DOM elements by their IDs
 	const customSelect = document.getElementById(selectId)
 	const selectedOption = document.getElementById(selectedOptionId)
 	const customOptions = document.getElementById(optionsId)
+	// Get all elements with class 'option' within the options container
 	const options = customOptions.getElementsByClassName("option")
 
-	if (!customSelect || !options || !selectedOption || !customOptions) return
+	// Exit early if any required element is missing
+	if (!customSelect || !options || !selectedOption || !customOptions) {
+		console.warn("Required elements for custom select not found")
+		return
+	}
 
+	// Add click event listener to toggle the options visibility
 	customSelect.addEventListener("click", () => {
+		// Toggle the 'hidden' class to show/hide the options menu
 		customOptions.classList.toggle("hidden")
+		// Select the arrow SVG element within the custom select
 		const arrow = customSelect.querySelector(".arrow svg")
+		// Rotate arrow based on options visibility
 		arrow.style.transform = customOptions.classList.contains("hidden")
 			? "rotate(0deg)"
 			: "rotate(180deg)"
 	})
 
+	// Iterate through each option element
 	for (let option of options) {
+		// Add click event listener to each option
 		option.addEventListener("click", () => {
+			// Update the displayed selected option text
 			selectedOption.innerText = option.innerText
+			// Hide the options menu
 			customOptions.classList.add("hidden")
+			// Reset arrow rotation
 			const arrow = customSelect.querySelector(".arrow svg")
 			arrow.style.transform = "rotate(0deg)"
 		})
 	}
 
+	// Add global click event listener to close the menu when clicking outside
 	document.addEventListener("click", (event) => {
 		const target = event.target
+		// Check if click is outside both select and options containers
 		if (!customSelect.contains(target) && !customOptions.contains(target)) {
+			// Hide the options menu
 			customOptions.classList.add("hidden")
+			// Reset arrow rotation
 			const arrow = customSelect.querySelector(".arrow svg")
 			arrow.style.transform = "rotate(0deg)"
 		}
