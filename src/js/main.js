@@ -371,3 +371,109 @@ function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
 if (document.getElementById("area-select")) {
 	initializeCustomSelect("area-select", "area-options", "area-selected-option")
 }
+
+// File Prewview
+function showUploadedFilePreview() {
+	const fileInput = document.getElementById("file")
+	const fileList = document.getElementById("fileList")
+
+	fileInput.addEventListener("change", (event) => {
+		const files = event.target.files
+
+		;[...files].forEach((file) => {
+			const container = document.createElement("div")
+			container.className = "relative w-10 group"
+
+			// File name
+			const name = document.createElement("p")
+			name.className = "text-center text-[10px] text-white break-all mt-1"
+			const dotIndex = file.name.lastIndexOf(".")
+			const baseName = file.name.slice(0, dotIndex)
+			const extension = file.name.slice(dotIndex)
+			name.textContent =
+				baseName.length > 6
+					? baseName.slice(0, 6) + "..." + extension
+					: baseName + extension
+
+			// File preview or icon
+			const preview = document.createElement("div")
+			preview.className =
+				"flex size-10 items-center justify-center rounded-[10px] bg-[#949494] p-1 group-[.uploaded]:bg-[#D9D9D9]"
+
+			preview.innerHTML = `
+				<svg
+																xmlns="http://www.w3.org/2000/svg"
+																width="33"
+																height="32"
+																viewBox="0 0 33 32"
+																fill="none"
+															>
+																<path
+																	class="stroke-[#313131] group-[.uploaded]:stroke-purple-400"
+																	d="M16.3484 11.291L11.8531 19.0772C11.5334 19.6517 11.4524 20.3289 11.6276 20.9627C11.8028 21.5964 12.2201 22.1359 12.7895 22.4646C13.359 22.7934 14.0348 22.8851 14.6713 22.7199C15.3077 22.5548 15.8537 22.146 16.1914 21.5818L22.0906 11.3803C22.3775 10.8971 22.5656 10.3617 22.644 9.80528C22.7224 9.24882 22.6896 8.68233 22.5474 8.13864C22.4053 7.59496 22.1566 7.0849 21.8159 6.63803C21.4751 6.19116 21.0491 5.81637 20.5624 5.53539C20.0757 5.25441 19.5381 5.07283 18.9807 5.00117C18.4234 4.92951 17.8573 4.96919 17.3154 5.11793C16.7735 5.26667 16.2665 5.52149 15.8238 5.86763C15.3811 6.21378 15.0115 6.64435 14.7364 7.1344L8.80455 17.4087C8.39909 18.0881 8.13272 18.8413 8.02095 19.6245C7.90917 20.4078 7.95421 21.2054 8.15345 21.9711C8.35268 22.7368 8.70215 23.4552 9.18151 24.0847C9.66088 24.7141 10.2606 25.2419 10.9458 25.6375C11.6309 26.0331 12.3879 26.2885 13.1727 26.389C13.9575 26.4894 14.7544 26.4328 15.5171 26.2225C16.2798 26.0122 16.9931 25.6524 17.6156 25.164C18.238 24.6756 18.7571 24.0683 19.1427 23.3775L24.6859 13.7765"
+																	stroke="#313131"
+																	stroke-width="1.5"
+																	stroke-miterlimit="10"
+																	stroke-linecap="round"
+																/>
+															</svg>
+				`
+			// Progress bar
+			const progressBarWrapper = document.createElement("div")
+			progressBarWrapper.className =
+				"mx-auto mt-1 h-[3px] w-[25px] overflow-hidden rounded-full bg-[#D9D9D9] transition-opacity duration-300"
+
+			const progressBar = document.createElement("div")
+			progressBar.className =
+				"h-full rounded-full bg-purple-200 transition-all duration-200 ease-linear"
+			progressBar.style.width = "0%"
+
+			progressBarWrapper.appendChild(progressBar)
+
+			// Remove button
+			const removeBtn = document.createElement("button")
+			removeBtn.className =
+				"absolute top-[-5px] right-[-5px] flex size-4 items-center justify-center rounded-full bg-gray-100 hover:bg-white"
+			removeBtn.innerHTML = `
+				 <svg
+																xmlns="http://www.w3.org/2000/svg"
+																width="8"
+																height="8"
+																viewBox="0 0 8 8"
+																fill="none"
+															>
+																<path d="M7 1L1 7M1 1L7 7" stroke="#402F9E" />
+															</svg>
+				`
+			removeBtn.onclick = () => container.remove()
+
+			// Append everything
+			container.appendChild(preview)
+			container.appendChild(name)
+			container.appendChild(progressBarWrapper)
+			container.appendChild(removeBtn)
+			fileList.appendChild(container)
+
+			// Simulate loading progress
+			let progress = 0
+			const interval = setInterval(() => {
+				progress += Math.random() * 10
+				const value = Math.min(progress, 100)
+				progressBar.style.width = `${value}%`
+
+				if (value >= 100) {
+					clearInterval(interval)
+					progressBarWrapper.classList.add("opacity-0")
+					container.classList.add("uploaded")
+					preview.classList.style.background = "red"
+					setTimeout(() => {
+						progressBarWrapper.remove()
+					}, 400)
+				}
+			}, 100)
+		})
+
+		fileInput.value = ""
+	})
+}
+showUploadedFilePreview()
