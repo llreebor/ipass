@@ -346,6 +346,7 @@ function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
 		option.addEventListener("click", () => {
 			// Update the displayed selected option text
 			selectedOption.innerText = option.innerText
+			selectedOption.classList.add("text-white")
 			// Hide the options menu
 			customOptions.classList.add("hidden")
 			// Reset arrow rotation

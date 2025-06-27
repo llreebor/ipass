@@ -402,7 +402,7 @@
 							class="tablet:grid-cols-2 grid gap-2.5 min-[1250px]:grid-cols-4"
 						>
 							<div
-								class="copy-card flex h-16 items-center justify-between gap-5 rounded-[20px] bg-purple-400 pr-2.5 pl-5"
+								class="copy-card flex h-16 items-center justify-between gap-5 rounded-[20px] bg-purple-400 pr-5 pl-5"
 							>
 								<p
 									class="copy-text laptop:text-lg desktop:text-xl text-xl text-white"
@@ -417,7 +417,7 @@
 								</button>
 							</div>
 							<div
-								class="copy-card flex items-center justify-between gap-5 rounded-[20px] bg-purple-400 pr-2.5 pl-5 min-[340px]:h-16"
+								class="copy-card flex items-center justify-between gap-5 rounded-[20px] bg-purple-400 pr-5 pl-5 min-[340px]:h-16"
 							>
 								<p
 									class="copy-text laptop:text-lg desktop:text-xl text-xl text-white"
@@ -448,7 +448,7 @@
 									</button>
 									<a
 										href="tel:8511234567"
-										class="flex size-[54px] items-center justify-center rounded-2xl bg-purple-300 hover:bg-[#4b38b9]"
+										class="flex size-[54px] items-center justify-center rounded-2xl bg-purple-300 hover:bg-[#836EFF]"
 									>
 										<img src="./images/icons/phone-icon.svg" alt="phone icon" />
 									</a>
@@ -471,7 +471,7 @@
 									</button>
 									<a
 										href="mailto:info@ipass.io"
-										class="flex size-[54px] items-center justify-center rounded-2xl bg-purple-300 hover:bg-[#4b38b9]"
+										class="flex size-[54px] items-center justify-center rounded-2xl bg-purple-300 hover:bg-[#836EFF]"
 									>
 										<img src="./images/icons/phone-icon.svg" alt="phone icon" />
 									</a>
@@ -486,8 +486,24 @@
 					<div class="container">
 						<!-- Form -->
 						<div
-							class="shadow-form laptop:max-w-[1107px] laptop:mt-[30px] laptop:pt-12 laptop:pl-[112px] relative mt-[120px] rounded-[20px] bg-purple-400 px-4 pt-[90px] pb-8 min-[340px]:px-8"
+							class="shadow-contact-form-mob tablet:shadow-contact-form laptop:max-w-[1107px] laptop:mt-[30px] laptop:pt-12 laptop:pl-[112px] relative mt-[120px] rounded-[20px]! bg-purple-400 px-4 pt-[90px] pb-8 min-[340px]:px-8"
 						>
+							<!-- Gradient Mob -->
+							<img
+								class="tablet:hidden! absolute top-0 right-0 h-auto w-full max-w-full rounded-[20px]"
+								src="./images/contact-us/gradient-mab.png"
+								alt="gradient image"
+							/>
+							<!-- Gradient Desktop -->
+							<div
+								class="tablet:block absolute top-0 right-0 hidden overflow-hidden! rounded-[20px]"
+							>
+								<img
+									class="flex rounded-[20px]"
+									src="./images/contact-us/gradient.png"
+									alt="gradient image"
+								/>
+							</div>
 							<!-- Form Image -->
 							<img
 								class="laptop:max-w-[519px] desktop:max-w-[640px] laptop:w-full laptop:-top-10 laptop:right-[-200px] absolute top-[-144px] -right-5 max-w-[280px]"
@@ -511,7 +527,7 @@
 
 								<form action="#" class="space-y-5">
 									<div class="space-y-2.5">
-										<div class="grid grid-cols-2 gap-2.5 min-[340px]:gap-5">
+										<div class="grid grid-cols-2 gap-2.5">
 											<input
 												class="input"
 												type="text"
@@ -529,7 +545,7 @@
 												id="last_name"
 											/>
 										</div>
-										<div class="grid grid-cols-2 gap-2.5 min-[340px]:gap-5">
+										<div class="grid grid-cols-2 gap-2.5">
 											<input
 												type="text"
 												class="input"
@@ -545,7 +561,7 @@
 												id="role"
 											/>
 										</div>
-										<div class="grid grid-cols-2 gap-2.5 min-[340px]:gap-5">
+										<div class="grid grid-cols-2 gap-2.5">
 											<input
 												type="email"
 												class="input"
@@ -569,11 +585,11 @@
 												<button
 													type="button"
 													id="area-select"
-													class="input w-full cursor-pointer justify-between text-left"
+													class="input group w-full cursor-pointer justify-between text-left"
 												>
 													<span
 														id="area-selected-option"
-														class="selected-option text-left text-gray-300"
+														class="selected-option text-left text-gray-300 group-hover:text-white"
 													>
 														Select Interest Area
 													</span>
@@ -591,7 +607,8 @@
 														>
 															<path
 																d="M3.5 9L13.5 19L23.5 9"
-																stroke="#533ECD"
+																class="group-hover:stroke-white"
+																stroke="#949494"
 																stroke-width="3"
 																stroke-linecap="round"
 																stroke-linejoin="round"
@@ -644,7 +661,7 @@
 										<div class="relative grid">
 											<label
 												for="file"
-												class="absolute top-3 right-3 cursor-pointer rounded bg-purple-400"
+												class="absolute top-3 right-3 cursor-pointer rounded"
 											>
 												<input
 													type="file"
@@ -652,10 +669,21 @@
 													name="file"
 													class="hidden"
 												/>
-												<img
-													src="./images/icons/attach-outline.svg"
-													alt="attach-icon"
-												/>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="32"
+													height="32"
+													viewBox="0 0 32 32"
+													fill="none"
+												>
+													<path
+														d="M15.8484 11.291L11.3531 19.0772C11.0334 19.6517 10.9524 20.3289 11.1276 20.9627C11.3028 21.5964 11.7201 22.1359 12.2895 22.4646C12.859 22.7934 13.5348 22.8851 14.1713 22.7199C14.8077 22.5548 15.3537 22.146 15.6914 21.5818L21.5906 11.3803C21.8775 10.8971 22.0656 10.3617 22.144 9.80528C22.2224 9.24882 22.1896 8.68233 22.0474 8.13864C21.9053 7.59496 21.6566 7.0849 21.3159 6.63803C20.9751 6.19116 20.5491 5.81637 20.0624 5.53539C19.5757 5.25441 19.0381 5.07283 18.4807 5.00117C17.9234 4.92951 17.3573 4.96919 16.8154 5.11793C16.2735 5.26667 15.7665 5.52149 15.3238 5.86763C14.8811 6.21378 14.5115 6.64435 14.2364 7.1344L8.30455 17.4087C7.89909 18.0881 7.63272 18.8413 7.52095 19.6245C7.40917 20.4078 7.45421 21.2054 7.65345 21.9711C7.85268 22.7368 8.20215 23.4552 8.68151 24.0847C9.16088 24.7141 9.76058 25.2419 10.4458 25.6375C11.1309 26.0331 11.8879 26.2885 12.6727 26.389C13.4575 26.4894 14.2544 26.4328 15.0171 26.2225C15.7798 26.0122 16.4931 25.6524 17.1156 25.164C17.738 24.6756 18.2571 24.0683 18.6427 23.3775L24.1859 13.7765"
+														stroke="#949494"
+														stroke-width="1.5"
+														stroke-miterlimit="10"
+														stroke-linecap="round"
+													/>
+												</svg>
 											</label>
 											<textarea
 												name="message"
