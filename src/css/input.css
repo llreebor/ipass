@@ -26,6 +26,8 @@
 	--color-purple-300: #533ecd;
 	--color-purple-400: #402f9e;
 
+	--color-orange-500: #ff8921;
+
 	--color-blue-900: #160964;
 	--color-blue-950: #1b172e;
 
@@ -100,6 +102,9 @@
 
 	.btn-primary {
 		@apply border-purple-300 bg-purple-300 text-white hover:bg-purple-400 disabled:cursor-not-allowed disabled:border-purple-400/30 disabled:bg-purple-300/30 disabled:text-gray-300;
+	}
+	.input.invalid {
+		@apply border-orange-500 text-orange-500;
 	}
 }
 

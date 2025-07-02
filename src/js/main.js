@@ -377,6 +377,8 @@ function showUploadedFilePreview() {
 	const fileInput = document.getElementById("file")
 	const fileList = document.getElementById("fileList")
 
+	if (!fileInput || !fileList) return
+
 	fileInput.addEventListener("change", (event) => {
 		const files = event.target.files
 
@@ -386,7 +388,8 @@ function showUploadedFilePreview() {
 
 			// File name
 			const name = document.createElement("p")
-			name.className = "text-center text-[10px] text-white break-all mt-1"
+			name.className =
+				"text-center text-[10px] text-white break-all mt-1 leading-[90%]"
 			const dotIndex = file.name.lastIndexOf(".")
 			const baseName = file.name.slice(0, dotIndex)
 			const extension = file.name.slice(dotIndex)
@@ -433,7 +436,7 @@ function showUploadedFilePreview() {
 			// Remove button
 			const removeBtn = document.createElement("button")
 			removeBtn.className =
-				"absolute top-[-5px] right-[-5px] flex size-4 items-center justify-center rounded-full bg-gray-100 hover:bg-white"
+				"absolute top-[-5px] right-[-5px] flex size-4 items-center justify-center rounded-full bg-gray-100 hover:bg-purple-300 group/close"
 			removeBtn.innerHTML = `
 				 <svg
 																xmlns="http://www.w3.org/2000/svg"
@@ -442,15 +445,15 @@ function showUploadedFilePreview() {
 																viewBox="0 0 8 8"
 																fill="none"
 															>
-																<path d="M7 1L1 7M1 1L7 7" stroke="#402F9E" />
+																<path class="group-hover/close:stroke-white" d="M7 1L1 7M1 1L7 7" stroke="#402F9E" />
 															</svg>
 				`
 			removeBtn.onclick = () => container.remove()
 
 			// Append everything
 			container.appendChild(preview)
-			container.appendChild(name)
 			container.appendChild(progressBarWrapper)
+			container.appendChild(name)
 			container.appendChild(removeBtn)
 			fileList.appendChild(container)
 
@@ -464,6 +467,7 @@ function showUploadedFilePreview() {
 				if (value >= 100) {
 					clearInterval(interval)
 					progressBarWrapper.classList.add("opacity-0")
+					progressBarWrapper.classList.add("hidden")
 					container.classList.add("uploaded")
 					preview.classList.style.background = "red"
 					setTimeout(() => {
