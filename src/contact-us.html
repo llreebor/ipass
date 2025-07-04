@@ -527,7 +527,7 @@
 
 								<form action="#" class="space-y-5">
 									<div class="space-y-2.5">
-										<div class="grid grid-cols-2 items-start gap-2.5">
+										<div class="tablet:grid-cols-2 grid items-start gap-2.5">
 											<label for="first_name" class="label">
 												<input
 													class="input peer invalid"
@@ -572,7 +572,7 @@
 												</div>
 											</label>
 										</div>
-										<div class="grid grid-cols-2 gap-2.5">
+										<div class="tablet:grid-cols-2 grid gap-2.5">
 											<input
 												type="text"
 												class="input"
@@ -588,7 +588,7 @@
 												id="role"
 											/>
 										</div>
-										<div class="grid grid-cols-2 items-start gap-2.5">
+										<div class="tablet:grid-cols-2 grid items-start gap-2.5">
 											<label for="email" class="label">
 												<input
 													type="email"
@@ -606,7 +606,7 @@
 														alt="check icon"
 													/>
 													<p class="error-message text-orange-500">
-														Not correct email address.
+														Incorrect email address.
 													</p>
 												</div>
 											</label>
@@ -628,7 +628,7 @@
 														alt="check icon"
 													/>
 													<p class="error-message text-orange-500">
-														Not correct phone.
+														Incorrect phone.
 													</p>
 												</div>
 											</label>
@@ -811,8 +811,9 @@
 											</div>
 										</div>
 										<button
+											disabled
 											type="submit"
-											class="btn btn-primary ml-auto hover:bg-white! hover:text-purple-400!"
+											class="btn btn-primary-white ml-auto"
 										>
 											Submit
 										</button>

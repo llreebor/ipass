@@ -101,8 +101,12 @@
 	}
 
 	.btn-primary {
-		@apply border-purple-300 bg-purple-300 text-white hover:bg-purple-400 disabled:cursor-not-allowed disabled:border-purple-400/30 disabled:bg-purple-300/30 disabled:text-gray-300;
+		@apply border-purple-300 bg-purple-300 text-white hover:bg-purple-400 disabled:cursor-not-allowed disabled:border-purple-400/30 disabled:bg-purple-300/30 disabled:text-gray-300 disabled:hover:bg-purple-300/30;
 	}
+	.btn-primary-white {
+		@apply border-purple-300 bg-purple-300 text-white hover:border-white hover:bg-white hover:text-purple-300 disabled:cursor-not-allowed disabled:border-purple-400/30 disabled:bg-purple-300/30 disabled:text-gray-300 disabled:hover:bg-purple-300/30;
+	}
+
 	.input.invalid {
 		@apply border-orange-500 text-orange-500;
 	}
