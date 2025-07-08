@@ -314,11 +314,17 @@ copyToClipboard()
 // - selectId: ID of the custom select container element
 // - optionsId: ID of the options container element
 // - selectedOptionId: ID of the element displaying the selected option
-function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
+function initializeCustomSelect(
+	selectId,
+	optionsId,
+	selectedOptionId,
+	resultInputId,
+) {
 	// Retrieve DOM elements by their IDs
 	const customSelect = document.getElementById(selectId)
 	const selectedOption = document.getElementById(selectedOptionId)
 	const customOptions = document.getElementById(optionsId)
+	const resultInput = document.getElementById(resultInputId)
 	// Get all elements with class 'option' within the options container
 	const options = customOptions.getElementsByClassName("option")
 
@@ -347,11 +353,15 @@ function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
 			// Update the displayed selected option text
 			selectedOption.innerText = option.innerText
 			selectedOption.classList.add("text-white")
+			customSelect.classList.add("selected")
+			resultInput.value = option.textContent.trim()
 			// Hide the options menu
 			customOptions.classList.add("hidden")
 			// Reset arrow rotation
 			const arrow = customSelect.querySelector(".arrow svg")
 			arrow.style.transform = "rotate(0deg)"
+
+			customSelect.classList.add("outline", "outline-green-300")
 		})
 	}
 
@@ -369,7 +379,12 @@ function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
 	})
 }
 if (document.getElementById("area-select")) {
-	initializeCustomSelect("area-select", "area-options", "area-selected-option")
+	initializeCustomSelect(
+		"area-select",
+		"area-options",
+		"area-selected-option",
+		"interest_area",
+	)
 }
 
 // File Prewview
@@ -481,3 +496,140 @@ function showUploadedFilePreview() {
 	})
 }
 showUploadedFilePreview()
+
+// Form Validation
+document.addEventListener("DOMContentLoaded", () => {
+	const form = document.getElementById("contacts_form")
+	const phoneInput = document.getElementById("phone")
+	const submitBtn = form.querySelector('[type="submit"]')
+	const requiredInputs = form.querySelectorAll("[required]")
+	let formAttempted = false
+
+	// ===== Phone mask =====
+	function formatPhone(value) {
+		const digits = value.replace(/\D/g, "").substring(0, 10)
+		let result = ""
+
+		if (digits.length > 0) result = "(" + digits.substring(0, 3)
+		if (digits.length >= 4) result += ") " + digits.substring(3, 6)
+		if (digits.length >= 7) result += "-" + digits.substring(6, 10)
+
+		return result
+	}
+
+	phoneInput.addEventListener("input", () => {
+		const digitsOnly = phoneInput.value.replace(/\D/g, "")
+		phoneInput.value = formatPhone(phoneInput.value)
+
+		// Снимаем ошибку, если 10 цифр
+		if (digitsOnly.length === 10) {
+			phoneInput.classList.remove("invalid")
+		}
+
+		if (formAttempted && validateForm()) {
+			submitBtn.disabled = false
+		}
+	})
+
+	// ===== Email validation =====
+	function isValidEmail(email) {
+		return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+	}
+
+	// ===== Form validation =====
+	function validateForm() {
+		let isValid = true
+
+		requiredInputs.forEach((input) => {
+			const value = input.value.trim()
+			const isEmail = input.type === "email"
+			const isPhone = input.id === "phone"
+
+			if (isPhone) {
+				const digits = value.replace(/\D/g, "")
+				if (digits.length !== 10) {
+					input.classList.add("invalid")
+					isValid = false
+				} else {
+					input.classList.remove("invalid")
+				}
+			} else if (isEmail) {
+				if (!isValidEmail(value)) {
+					input.classList.add("invalid")
+					isValid = false
+				} else {
+					input.classList.remove("invalid")
+				}
+			} else {
+				if (value === "") {
+					input.classList.add("invalid")
+					isValid = false
+				} else {
+					input.classList.remove("invalid")
+				}
+			}
+		})
+
+		return isValid
+	}
+
+	// ===== Real-time input validation =====
+	requiredInputs.forEach((input) => {
+		input.addEventListener("input", () => {
+			if (input.id === "phone") return // телефон обрабатывается отдельно
+
+			const value = input.value.trim()
+			const isEmail = input.type === "email"
+
+			if (isEmail) {
+				if (isValidEmail(value)) {
+					input.classList.remove("invalid")
+				}
+			} else {
+				if (value !== "") {
+					input.classList.remove("invalid")
+				}
+			}
+
+			if (formAttempted && validateForm()) {
+				submitBtn.disabled = false
+			}
+		})
+	})
+
+	// ===== Modal message =====
+	function showModal(message) {
+		const modal = document.createElement("div")
+		modal.textContent = message
+		modal.style.cssText = `
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: white;
+			padding: 2rem;
+			box-shadow: 0 0 20px rgba(0,0,0,0.2);
+			z-index: 1000;
+		`
+		document.body.appendChild(modal)
+		setTimeout(() => modal.remove(), 3000)
+	}
+
+	// ===== Submit handler =====
+	form.addEventListener("submit", (e) => {
+		formAttempted = true
+
+		const isValid = validateForm()
+
+		if (!isValid) {
+			e.preventDefault()
+			submitBtn.disabled = true
+			return
+		}
+
+		// Всё хорошо — показать модалку
+		setTimeout(() => {
+			showModal("Form was successfully submitted.")
+		}, 100)
+	})
+})

@@ -822,7 +822,7 @@
 									<div class="space-y-3">
 										<label
 											for="keep_informed"
-											class="flex cursor-pointer items-center gap-5"
+											class="group flex cursor-pointer items-center gap-5"
 										>
 											<input
 												type="checkbox"
@@ -830,13 +830,15 @@
 												name="keep_informed"
 												class="checkbox peer"
 											/>
-											<span class="text-gray-200 transition-colors">
+											<span
+												class="text-white transition-colors group-hover:text-gray-200 peer-checked:text-white"
+											>
 												Keep me informed about iPass
 											</span>
 										</label>
 										<label
 											for="contact_me"
-											class="flex cursor-pointer items-center gap-5"
+											class="group flex cursor-pointer items-center gap-5"
 										>
 											<input
 												type="checkbox"
@@ -845,7 +847,7 @@
 												class="checkbox peer"
 											/>
 											<span
-												class="text-gray-200 transition-colors peer-checked:text-white"
+												class="text-white transition-colors group-hover:text-gray-200 peer-checked:text-white"
 											>
 												Have a sales person contact me
 											</span>
@@ -861,40 +863,6 @@
 									</button>
 								</form>
 							</div>
-						</div>
-					</div>
-				</section>
-
-				<section>
-					<div class="container">
-						<div
-							class="max-w-xl space-y-4 rounded-2xl bg-[#3E1EAF] p-6 text-white"
-						>
-							<p class="text-xl leading-relaxed">
-								Hi iPass,
-								<br />
-								I’m Alex from Booking company.
-								<br />
-								I have a few questions about your readers:
-							</p>
-
-							<!-- File upload input -->
-							<input
-								id="fileInput"
-								type="file"
-								multiple
-								class="hidden"
-								accept="image/*"
-							/>
-							<button
-								onclick="document.getElementById('fileInput').click()"
-								class="flex items-center gap-2 text-white hover:underline"
-							>
-								📎 Attach file
-							</button>
-
-							<!-- File preview list -->
-							<div id="fileList" class="flex flex-wrap gap-4 pt-2"></div>
 						</div>
 					</div>
 				</section>

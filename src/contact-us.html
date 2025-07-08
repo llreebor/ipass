@@ -525,12 +525,34 @@
 									right place and respond promptly.
 								</p>
 
-								<form action="#" class="space-y-5">
+								<form
+									enctype="multipart/form-data"
+									novalidate
+									action="https://jsonplaceholder.typicode.com/posts"
+									method="POST"
+									class="space-y-5"
+									id="contacts_form"
+								>
+									<!-- Hidden Fields -->
+									<input type="hidden" name="debug" value="1" />
+									<input
+										type="hidden"
+										name="debugEmail"
+										value="markpotts@ipass.io"
+									/>
+									<input type="hidden" name="oid" value="00DKj00000ADG1m" />
+									<input
+										type="hidden"
+										name="retURL"
+										value="https://preview.ipass.io#leadform?submit=complete"
+									/>
+
+									<!-- Our Fields -->
 									<div class="space-y-2.5">
 										<div class="tablet:grid-cols-2 grid items-start gap-2.5">
 											<label for="first_name" class="label">
 												<input
-													class="input peer invalid"
+													class="input peer"
 													type="text"
 													placeholder="First Name*"
 													required
@@ -553,7 +575,7 @@
 											<label for="last_name" class="label">
 												<input
 													type="text"
-													class="input peer invalid"
+													class="input peer"
 													placeholder="Last Name*"
 													required
 													name="last_name"
@@ -592,7 +614,7 @@
 											<label for="email" class="label">
 												<input
 													type="email"
-													class="input peer invalid"
+													class="input peer"
 													placeholder="Email*"
 													name="email"
 													id="email"
@@ -614,7 +636,7 @@
 											<label for="phone" class="label">
 												<input
 													type="text"
-													class="input peer invalid"
+													class="input peer"
 													placeholder="Phone*"
 													name="phone"
 													id="phone"
@@ -641,6 +663,11 @@
 													id="area-select"
 													class="input group w-full cursor-pointer justify-between text-left"
 												>
+													<input
+														type="hidden"
+														id="interest_area"
+														name="interest_area"
+													/>
 													<span
 														id="area-selected-option"
 														class="selected-option text-left text-gray-300 group-hover:text-white"
@@ -810,11 +837,7 @@
 												</p>
 											</div>
 										</div>
-										<button
-											disabled
-											type="submit"
-											class="btn btn-primary-white ml-auto"
-										>
+										<button type="submit" class="btn btn-primary-white ml-auto">
 											Submit
 										</button>
 									</div>
