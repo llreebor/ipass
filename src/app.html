@@ -743,27 +743,99 @@
 									products and solutions.
 								</p>
 
-								<form action="#" class="space-y-5">
+								<form
+									novalidate
+									action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+									method="POST"
+									class="relative space-y-5"
+									id="contacts_form"
+								>
+									<!-- Success Message -->
+									<div
+										id="success-message"
+										class="absolute right-0 -bottom-5 hidden items-center gap-2.5 rounded-full bg-green-300 px-5 py-[11px] text-purple-300"
+									>
+										Successfully Submitted
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="22"
+											height="22"
+											viewBox="0 0 22 22"
+											fill="none"
+										>
+											<path
+												d="M9.243 15.3139L5 11.0699L6.414 9.6559L9.243 12.4839L14.899 6.8269L16.314 8.2419L9.243 15.3139Z"
+												fill="#533ECD"
+											/>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M0 11C0 4.925 4.925 0 11 0C17.075 0 22 4.925 22 11C22 17.075 17.075 22 11 22C4.925 22 0 17.075 0 11ZM11 20C9.8181 20 8.64778 19.7672 7.55585 19.3149C6.46392 18.8626 5.47177 18.1997 4.63604 17.364C3.80031 16.5282 3.13738 15.5361 2.68508 14.4442C2.23279 13.3522 2 12.1819 2 11C2 9.8181 2.23279 8.64778 2.68508 7.55585C3.13738 6.46392 3.80031 5.47177 4.63604 4.63604C5.47177 3.80031 6.46392 3.13738 7.55585 2.68508C8.64778 2.23279 9.8181 2 11 2C13.3869 2 15.6761 2.94821 17.364 4.63604C19.0518 6.32387 20 8.61305 20 11C20 13.3869 19.0518 15.6761 17.364 17.364C15.6761 19.0518 13.3869 20 11 20Z"
+												fill="#533ECD"
+											/>
+										</svg>
+									</div>
+									<!-- Hidden Fields -->
+									<input type="hidden" name="debug" value="1" />
+									<input
+										type="hidden"
+										name="debugEmail"
+										value="markpotts@ipass.io"
+									/>
+									<input type="hidden" name="oid" value="00DKj00000ADG1m" />
+									<input
+										type="hidden"
+										name="retURL"
+										value="https://llreebor.github.io/ipass/src/contact-us#leadform?submit=complete"
+									/>
+									<!-- Our Fields -->
 									<div class="space-y-2.5">
-										<div class="grid grid-cols-2 gap-5">
-											<input
-												class="input"
-												type="text"
-												placeholder="First Name*"
-												required
-												name="first_name"
-												id="first_name"
-											/>
-											<input
-												type="text"
-												class="input"
-												placeholder="Last Name*"
-												required
-												name="last_name"
-												id="last_name"
-											/>
+										<div class="tablet:grid-cols-2 grid items-start gap-2.5">
+											<label for="first_name" class="label">
+												<input
+													class="input peer"
+													type="text"
+													placeholder="First Name*"
+													required
+													name="first_name"
+													id="first_name"
+												/>
+												<div
+													class="hidden items-center gap-2 peer-[.invalid]:flex"
+												>
+													<img
+														src="./images/icons/gg_check-o.svg"
+														alt="check icon"
+													/>
+													<p class="error-message text-orange-500">
+														The field is required.
+													</p>
+												</div>
+											</label>
+
+											<label for="last_name" class="label">
+												<input
+													type="text"
+													class="input peer"
+													placeholder="Last Name*"
+													required
+													name="last_name"
+													id="last_name"
+												/>
+												<div
+													class="hidden items-center gap-2 peer-[.invalid]:flex"
+												>
+													<img
+														src="./images/icons/gg_check-o.svg"
+														alt="check icon"
+													/>
+													<p class="error-message text-orange-500">
+														The field is required.
+													</p>
+												</div>
+											</label>
 										</div>
-										<div class="grid grid-cols-2 gap-5">
+										<div class="tablet:grid-cols-2 grid gap-2.5">
 											<input
 												type="text"
 												class="input"
@@ -779,30 +851,57 @@
 												id="role"
 											/>
 										</div>
-										<div class="grid grid-cols-2 gap-5">
-											<input
-												type="email"
-												class="input"
-												placeholder="Email*"
-												name="email"
-												id="email"
-												required
-											/>
-											<input
-												type="text"
-												class="input"
-												placeholder="Phone*"
-												name="phone"
-												id="phone"
-												required
-											/>
+										<div class="tablet:grid-cols-2 grid items-start gap-2.5">
+											<label for="email" class="label">
+												<input
+													type="email"
+													class="input peer"
+													placeholder="Email*"
+													name="email"
+													id="email"
+													required
+												/>
+												<div
+													class="hidden items-center gap-2 peer-[.invalid]:flex"
+												>
+													<img
+														src="./images/icons/gg_check-o.svg"
+														alt="check icon"
+													/>
+													<p class="error-message text-orange-500">
+														Incorrect email address.
+													</p>
+												</div>
+											</label>
+
+											<label for="phone" class="label">
+												<input
+													type="text"
+													class="input peer"
+													placeholder="Phone*"
+													name="phone"
+													id="phone"
+													required
+												/>
+												<div
+													class="hidden items-center gap-2 peer-[.invalid]:flex"
+												>
+													<img
+														src="./images/icons/gg_check-o.svg"
+														alt="check icon"
+													/>
+													<p class="error-message text-orange-500">
+														Incorrect phone.
+													</p>
+												</div>
+											</label>
 										</div>
 									</div>
 
 									<div class="space-y-3">
 										<label
 											for="keep_informed"
-											class="flex cursor-pointer items-center gap-5"
+											class="group flex cursor-pointer items-center gap-5"
 										>
 											<input
 												type="checkbox"
@@ -811,14 +910,14 @@
 												class="checkbox peer"
 											/>
 											<span
-												class="text-gray-200 transition-colors peer-checked:text-white"
+												class="text-white transition-colors group-hover:text-gray-200 peer-checked:text-white"
 											>
 												Keep me informed about iPass
 											</span>
 										</label>
 										<label
 											for="contact_me"
-											class="flex cursor-pointer items-center gap-5"
+											class="group flex cursor-pointer items-center gap-5"
 										>
 											<input
 												type="checkbox"
@@ -827,7 +926,7 @@
 												class="checkbox peer"
 											/>
 											<span
-												class="text-gray-200 transition-colors peer-checked:text-white"
+												class="text-white transition-colors group-hover:text-gray-200 peer-checked:text-white"
 											>
 												Have a sales person contact me
 											</span>
