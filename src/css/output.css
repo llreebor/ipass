@@ -2393,6 +2393,11 @@
       height: 644px;
     }
   }
+  .desktop\:h-\[680px\] {
+    @media (width >= 1430px) {
+      height: 680px;
+    }
+  }
   .desktop\:max-w-\[413px\] {
     @media (width >= 1430px) {
       max-width: 413px;
